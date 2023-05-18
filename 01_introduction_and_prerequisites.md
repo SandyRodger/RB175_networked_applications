@@ -35,4 +35,13 @@
 
 ## [Developing on Cloud9](https://launchschool.com/lessons/15115b5d/assignments/51e3b1ee)
 
-- 
+- I won't use Cloud9. I will do the tasks on VSCode.
+
+## [Assignment: HTML and CSS](https://launchschool.com/lessons/15115b5d/assignments/85fb996f)
+
+- ERB. A templating language that combines ruby and html.
+- [Codecademy course on html](https://launchschool.com/lessons/15115b5d/assignments/85fb996f)
+- [CSS course](http://learn.shayhowe.com/html-css/)
+- Do [LS202](https://launchschool.com/courses/21b45c96) now to have a grounding in html and css.
+
+## [Quiz]
