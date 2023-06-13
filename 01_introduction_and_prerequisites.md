@@ -40,7 +40,7 @@
 ## [Assignment: HTML and CSS](https://launchschool.com/lessons/15115b5d/assignments/85fb996f)
 
 - ERB. A templating language that combines ruby and html.
-- [Codecademy course on html](https://launchschool.com/lessons/15115b5d/assignments/85fb996f)
+- [Codecademy course on html](https://github.com/SandyRodger/RB175_networked_applications/blob/main/learn_html_codecademy.md)
 - [CSS course](http://learn.shayhowe.com/html-css/)
 - Do [LS202](https://launchschool.com/courses/21b45c96) now to have a grounding in html and css.
 
