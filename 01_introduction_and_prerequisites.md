@@ -41,7 +41,7 @@
 
 - ERB. A templating language that combines ruby and html.
 - [Codecademy course on html](https://github.com/SandyRodger/RB175_networked_applications/blob/main/learn_html_codecademy.md)
-- [CSS course](http://learn.shayhowe.com/html-css/)
-- Do [LS202](https://launchschool.com/courses/21b45c96) now to have a grounding in html and css.
+- [CSS course](http://learn.shayhowe.com/html-css/) - Completed
+- Do [LS202](https://launchschool.com/courses/21b45c96) now to have a grounding in html and css. This is optional. I am abandoning it because it is too boring.
 
 ## [Quiz]
