@@ -44,5 +44,7 @@
 - [CSS course](http://learn.shayhowe.com/html-css/) - Completed
 - Do [LS202](https://launchschool.com/courses/21b45c96) now to have a grounding in html and css. This is optional. I am abandoning it because it is too boring.
 
-## [Quiz]
+## [Quiz](https://launchschool.com/quizzes/8b016690)
+
+- 14.6.23 - 100% (2 questions)
 
