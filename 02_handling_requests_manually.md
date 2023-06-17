@@ -38,20 +38,34 @@
 ## [Parsing Path and Parameters](https://launchschool.com/lessons/cac53b94/assignments/4d46009e)
 
 
+## [Sending a Complete Response](https://launchschool.com/lessons/cac53b94/assignments/65b0e271)
 
-## [Sending a Complete Response
-## [Persisting State in the URL
-## [Dealing with Empty Requests
-## [Summary
+
+## [Persisting State in the URL](https://launchschool.com/lessons/cac53b94/assignments/3e3dd1f9)
+
+- Cool!
+
+## [Dealing with Empty Requests](https://launchschool.com/lessons/cac53b94/assignments/423845e1)
+
+- I cant seem to emulate this error
+
+## [Summary](https://launchschool.com/lessons/cac53b94/assignments/d5f4cb26)
+
+- HTTP is text based, so this lesson was all abput messing with it entirely as a text file.
+- HTTP is made up of TCP. This is the protocol at the Transport layer. Its job is talking between 2 computers.
+- URLs are made up of different parts (I knew this)
+- Params are addewd with `&`s. Obvs.
+- HTTP is stateless which means you have to dance around to make it look like it isn't.
+
 ## Overview
 
 |  | Once | Twice | Thrice | Comprehension | Retention
 | :--- | :---: | :---: | :---: | :--- | :---
 |1	Introduction| 14.6.23|
 |2	Coding Along with This Course| 14.6.23|
-|3	A Simple Echo Server|
-|4	Parsing Path and Parameters|
-|5	Sending a Complete Response|
-|6	Persisting State in the URL|
-|7	Dealing with Empty Requests|
-|8	Summary|
+|3	A Simple Echo Server|15.6.23|
+|4	Parsing Path and Parameters|16.6.23|
+|5	Sending a Complete Response|16.6.23|
+|6	Persisting State in the URL|17.6.23|
+|7	Dealing with Empty Requests|17.6.23|
+|8	Summary|17.6.23|
