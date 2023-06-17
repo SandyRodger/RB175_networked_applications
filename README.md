@@ -5,7 +5,7 @@
 |  | Once | Twice | Thrice | Comprehension | Retention
 | :--- | :---: | :---: | :---: | :--- | :---
 |1. Introduction and Prerequisites|	14.6.23 |
-|2	Handling Requests Manually|
+|2	Handling Requests Manually|17.6.23 |
 |3	Working with Sinatra|
 |4	Deploying Sinatra Applications|
 |5	Project: Todos|
