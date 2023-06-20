@@ -37,17 +37,15 @@ SO, I'LL COME BACK TO THAT.
 
 - Most Devs would never write a Rack application except in the simplest of situations. We'll go through it here for teaching purposes.
 
-### More about Rack
+### [Austin Miller's rack article on Medium](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md)
 
-- [Austin Miller's Article: Rack, pt 1](https://aumi9292.medium.com/rack-part-i-6bb268dde211)
-  - [A comparison of (Rack) web-servers for Ruby web applications](https://www.digitalocean.com/community/tutorials/a-comparison-of-rack-web-servers-for-ruby-web-applications)
-    - This started good, but got into the weeds a bit talking about the advantages of different web-servers, like Puma, Thin and Unicorn. I found it too vague to be meaningful to me right now. Probably because I don't know enough about how web-servers work concretely.
-   -['Middleware'](https://en.wikipedia.org/wiki/Middleware)
-     - I just had a glance at this. Apparently it is also called 'software glue'
+### [What is Rack in Ruby/Rails?](http://blog.gauravchande.com/what-is-rack-in-ruby-rails)
+### [Growing your own web Framework on rack, pt 1](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-1)
+### [Growing your own web Framework on rack, pt 2](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
+### [Growing your own web Framework on rack, pt 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
+### [Growing your own web Framework on rack, pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
 
-### Blog Series on Rack
 
-<img width="670" alt="Screenshot 2023-06-19 at 17 34 02" src="https://github.com/SandyRodger/RB175_networked_applications/assets/78854926/7ab61c2e-6aa7-4031-86ee-32ebc0669a1e">
 
 
 3	Sinatra Documentation	Not completed
