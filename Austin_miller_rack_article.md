@@ -21,7 +21,13 @@
 ## What does it mean for an app to be rack-based?
 
 - It's a Rack-based app if it follows a set of specifications that mean Rack knows what to do with it:
-  - The application must define s `call` method.
+  - The application must define a `call` method, which takes 1 parameter, usually called `env`.
+  - This `call` method will return and array containing 3 objects:
+    -  a String or Int that is the status code (ie `200` for OK)
+    -  a Hash object that holds key-value pairs of content headers and their values
+    -  an object that responds to Enumerable#each and holds the body of the response.
+
+<img width="719" alt="Screenshot 2023-06-21 at 08 00 56" src="https://github.com/SandyRodger/RB175_networked_applications/assets/78854926/cd28a226-6a36-4252-914c-e722b2854655">
 
 ## Where does it sit in server-side development?
 
@@ -48,7 +54,33 @@
 - ... by taking care of lower level tasks, like handling http requests/responses.
 - It provides a standardized way for aservers and apps to communicate. It doesn't matter which app-server you're using, the configuration file stays the same.
 
+## The #call Method
 
+- When call is envoked, the object passed to `env` will be a hash. The hash will have all the information aboput the incoming request. (`HTTP` headers and other environment variables.
+- The return value of `call` is used to format a HTTP response for the client.
+
+## What else does Rack need?
+
+- What to run and how to run it.
+  - Run a rackup `config.ru` file.
+  - or `require 'rack'` and invoke `Rack::Handler::WEBrick.run`
+
+```ruby
+require 'rack'
+
+class MyApp
+  def call(env)
+    body = "<h2>Hello in Style!</h2>"
+    ['200', {"Content-Type" => "text/html"}, [body]]
+  end
+end
+
+Rack::Handler::WEBrick.run MyApp.new
+```
+
+
+
+## Other notes
 
 - [A comparison of (Rack) web-servers for Ruby web applications](https://www.digitalocean.com/community/tutorials/a-comparison-of-rack-web-servers-for-ruby-web-applications)
     - This started good, but got into the weeds a bit talking about the advantages of different web-servers, like Puma, Thin and Unicorn. I found it too vague to be meaningful to me right now. Probably because I don't know enough about how web-servers work concretely.
