@@ -155,9 +155,9 @@ Rack::Handler::WEBrick.run MyApp.new
 
 # [Austin Miller's Article: Rack, pt 2](https://aumi9292.medium.com/rack-part-ii-5dc89e9d89d8)
 
-  - what qualifies a Ruby application to be a Rack middleware
-  - what middlewares can do for your application
-  - two Rack middleware applications for my_app.rb
+  - What qualifies a Ruby application to be a Rack middleware
+  - What middlewares can do for your application
+  - Two Rack middleware applications for my_app.rb
 
 ## What is Rack Middleware?
 
@@ -172,7 +172,10 @@ Rack::Handler::WEBrick.run MyApp.new
 
 ## How does Middleware work?
 
-- The `call` method has to return an array with 3 objects, used to form the response status, response headers and response body.
+- The `call` method has to return an array with 3 objects, used to form:
+  -  the response status
+  -  the response headers
+  -  the response body
 - Classes that satisfy this requirement can be chained together.
 - You can have many small modular apps can be chained together to make a middleware stack.
 
@@ -200,8 +203,108 @@ class FriendlyGreeting
 end
 Rack::Handler::WEBrick.run FriendlyGreeting.new(MyApp.new)
 ```
+
+- OK, so we create an instance of the `FriendlyGreeting` class, passing in a `MyApp` object as an argument and pass all that as an argument to the `::WEBrick.run` method. Simple method chaining. Easy.
+
 ## Rack builder
+
+- Rack::Builder is a DSL (Domain Specific Language).
+- It gives us the `use` method to more concisely encorporate middlewares.
+- The following example shows how messy it gets when you add a bunch of middlewares without Rack::Builder:
+
+```
+class MyApp
+  def call(env)
+    ['200', { "Content-Type" => "text/plain" }, ["hello world"]]
+  end
+end
+class FriendlyGreeting
+  def initialize(app)
+    @app = app
+  end
+  def call(env)
+    body = @app.call(env).last
+    [
+      '200', 
+      { "Content-Type" => "text/plain" }, 
+      body.prepend("A warm welcome to you!\n")
+    ]
+  end
+end
+class Wave
+  def initialize(app)
+    @app = app
+  end
+  def call(env)
+    body = @app.call(env).last
+   
+    [
+     '200', 
+     { "Content-Type" => "text/plain" }, 
+     body.prepend("Wave from afar!\n")
+    ]
+  end 
+end
+Rack::Handler::WEBrick.run Wave.new(FriendlyGreeting.new(MyApp.new))
+```
+
+- To use `Rack::Builder` we:
+  - Create a `config.ru` file in the same directory as our `myapp.rb` file:
+
+```ru
+#config.ru
+require_relative "myapp"
+use Wave
+use FriendlyGreeting
+run MyApp.new
+```
+
+  - define your classes in a ruby file:
+
+```ruby
+#myapp.rb
+#require 'rack'
+class MyApp
+  def call(env)
+    ['200', { "Content-Type" => "text/plain" }, ["hello world"]]
+  end
+end
+class FriendlyGreeting
+  def initialize(app)
+    @app = app
+  end
+  def call(env)
+    body = @app.call(env).last
+    [
+      '200', 
+      { "Content-Type" => "text/plain" }, 
+      body.prepend("A warm welcome to you!\n")
+    ]
+  end
+end
+class Wave
+  def initialize(app)
+    @app = app
+  end
+  def call(env)
+    body = @app.call(env).last
+    [
+     '200', 
+     { "Content-Type" => "text/plain" }, 
+     body.prepend("Wave from afar!\n")
+    ]
+  end 
+end
+```
+
+- and run the `config.ru` file with `rackup config.ru`.
 
 ## Conclusion
 
-- Rack is the 9th most popular Ruby Gem.
+- Rack is the 9th most popular Ruby Gem. It does this:
+  - Abstracts low-level tasks:
+    - Parsing HTTP requests
+    - Formatting the return value of your app to HTTP
+  - Generalizes application-to-server communication:
+    - All Rack based apps (whether written in Sinatra, rails, etc) can establish socket connections (Puma, WEBrick, Passenger).
+  - Provides an architechture for using modular pieces of functionality.
