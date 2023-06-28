@@ -12,13 +12,12 @@
   - The frameworks devs use with Rack.
   - We will look at some Rack source code, and send some Rack source code to our browser for demonstration purposes.
 
-### Part 2: Middleware
-
+### [Part 2: Middleware](https://github.com/SandyRodger/RB175_networked_applications/edit/main/Austin_miller_rack_article.md#austin-millers-article-rack-pt-2)
 
 
 ## What is Rack?
 
-- A ruby gem that provides an interface between your Ruby program and the application server you're using.
+- A ruby gem that provides an API (Application Programming Interface) between your Ruby program and the application server you're using.
 - It facilitates communication between your Rack-based Ruby app and the applications erver you're working with (which could be WEBrick, Puma, Passenger, Unicorn,Thin ...)
 - You type in a URL or click a link and this happens:
 
