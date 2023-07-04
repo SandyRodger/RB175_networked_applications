@@ -40,7 +40,14 @@ SO, I'LL COME BACK TO THAT.
 ### [Austin Miller's rack article on Medium](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md)
 
 ### [What is Rack in Ruby/Rails?](http://blog.gauravchande.com/what-is-rack-in-ruby-rails)
+
+- For this article, IU will take minimal notes and treat it more as an exercise.
+- [Railscast video](http://railscasts.com/episodes/151-rack-middleware) about Rack.
+
 ### [Growing your own web Framework on rack, pt 1](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-1)
+
+- 
+
 ### [Growing your own web Framework on rack, pt 2](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
 ### [Growing your own web Framework on rack, pt 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
 ### [Growing your own web Framework on rack, pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
