@@ -54,26 +54,25 @@ SO, I'LL COME BACK TO THAT.
 
 
 
-
-3	Sinatra Documentation	Not completed
-4	Preparations	Not completed
-5	How Routes Work	Not completed
-6	Rendering Templates	Not completed
-7	Table of Contents	Not completed
-8	Adding a Chapter Page	Not completed
-9	Code Challenge: Dynamic Directory Index	Not completed
-10	Using Layouts	Not completed
-11	Route Parameters	Not completed
-12	Before Filters	Not completed
-13	View Helpers	Not completed
-14	Redirecting	Not completed
-15	Adding a Search Form	Not completed
-16	Improving Search	Not completed
-17	Code Challenge: Users and Interests	Not completed
-18	Server-side vs. Client-side Code	Not completed
-19	Optional: A Quick Analysis of How Sinatra Works	Not completed
-20	Summary	Not completed
-21	Quiz
+## 3	Sinatra Documentation	Not completed
+## 4	Preparations	Not completed
+## 5	How Routes Work	Not completed
+## 6	Rendering Templates	Not completed
+## 7	Table of Contents	Not completed
+## 8	Adding a Chapter Page	Not completed
+## 9	Code Challenge: Dynamic Directory Index	Not completed
+## 10	Using Layouts	Not completed
+## 11	Route Parameters	Not completed
+## 12	Before Filters	Not completed
+## 13	View Helpers	Not completed
+## 14	Redirecting	Not completed
+## 15	Adding a Search Form	Not completed
+## 16	Improving Search	Not completed
+## 17	Code Challenge: Users and Interests	Not completed
+## 18	Server-side vs. Client-side Code	Not completed
+## 19	Optional: A Quick Analysis of How Sinatra Works	Not completed
+## 20	Summary	Not completed
+## 21	Quiz
 
 |  | Once | Twice | Thrice | Comprehension | Retention
 | :--- | :---: | :---: | :---: | :--- | :---
