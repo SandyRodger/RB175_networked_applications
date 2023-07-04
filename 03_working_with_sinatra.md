@@ -113,6 +113,10 @@ end
     - Headers: these will be in the form of key-value pairs inside a hash. The key will be a header name and the corresponding value will be the value for that header.
     - Response Body: this object can be anything, as long as that object can respond to an each method. An Enumerable object would work, as would a StringIO object, or even a custom object with an each method would work. The response should never just be a String by itself, but it must yield a String value.
 
+#### A bug:
+
+The Puma file was being given 2 arguments but iut expected 1. This was because the 2nd parameter was defined as `**options`, so when i deleted the two asterisks it ran fine. It felt great to catch that. Maybe the difference is to be found in the differing versions of Ruby? I'll ask Olly.
+
 ### [Growing your own web Framework on rack, pt 2](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
 ### [Growing your own web Framework on rack, pt 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
 ### [Growing your own web Framework on rack, pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
@@ -120,24 +124,24 @@ end
 
 
 
-## Sinatra Documentation	Not completed
-## Preparations	Not completed
-## How Routes Work	Not completed
-## Rendering Templates	Not completed
-## Table of Contents	Not completed
-## Adding a Chapter Page	Not completed
-## Code Challenge: Dynamic Directory Index	Not completed
-## Using Layouts	Not completed
-## Route Parameters	Not completed
-## Before Filters	Not completed
-## View Helpers	Not completed
-## Redirecting	Not completed
-## Adding a Search Form	Not completed
-## Improving Search	Not completed
-## Code Challenge: Users and Interests	Not completed
-## Server-side vs. Client-side Code	Not completed
-## Optional: A Quick Analysis of How Sinatra Works	Not completed
-## Summary	Not completed
+## Sinatra Documentation	
+## Preparations
+## How Routes Work
+## Rendering Templates
+## Table of Contents
+## Adding a Chapter Page
+## Code Challenge: Dynamic Directory Index
+## Using Layouts
+## Route Parameters
+## Before Filters
+## View Helpers
+## Redirecting
+## Adding a Search Form
+## Improving Search
+## Code Challenge: Users and Interests
+## Server-side vs. Client-side Code
+## Optional: A Quick Analysis of How Sinatra Works
+## Summary
 ## Quiz
 
 |  | Once | Twice | Thrice | Comprehension | Retention
