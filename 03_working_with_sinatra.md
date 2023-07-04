@@ -28,25 +28,90 @@
 
 HERE'S A SENTENCE I DON'T UNDERSTAND:
 
-"When working with Rack applications...
-          ...our entire server is comprised of...
-                  ...the Rack application and the web server...
-                        (which is probably WEBrick, which comes with your Ruby installation)".
+"When working with Rack applications our entire server is comprised of the Rack application and the web server (which is probably WEBrick, which comes with your Ruby installation)".
                         
 SO, I'LL COME BACK TO THAT.
 
 - Most Devs would never write a Rack application except in the simplest of situations. We'll go through it here for teaching purposes.
 
-### [Austin Miller's rack article on Medium](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md)
+## Articles:
 
-### [What is Rack in Ruby/Rails?](http://blog.gauravchande.com/what-is-rack-in-ruby-rails)
+### [My notes on Austin Miller's rack article on Medium](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md)
 
-- For this article, IU will take minimal notes and treat it more as an exercise.
-- [Railscast video](http://railscasts.com/episodes/151-rack-middleware) about Rack.
+### [`What is Rack in Ruby/Rails?` blog](http://blog.gauravchande.com/what-is-rack-in-ruby-rails)
+
+- Your browser sends a HTTP request to the server.
+- The server has 'rails' loaded. It would hand the HTTP request to Rails, but Rails wouldn't understand, so we first pass it to Rack.
+- Server passes the HTTP request to Rails which formats this:
+
+```
+GET /users HTTP/1.1
+Host: localhost
+Connection: close
+```
+
+- into this:
+
+```
+env = {
+  'REQUEST_METHOD' => 'GET',
+  'PATH_INFO' => '/users',
+  'HTTP_VERSION' => '1.1',
+  'HTTP_HOST' => 'localhost',
+  ...
+  ...
+}
+```
+
+- this `env` is then sent to the app.
+- The app does its work and returns its response to the server as a 3 object array:
+
+```
+[
+  200,
+  {
+    'Content-Length' => '25',
+    'Content-Type' => 'text/html'
+  },
+  [
+    '<html>',
+    '...',
+    '</html>'
+  ]
+]
+```
+
+- The server can take this response and format it into a response to the client.
+
+- For the app to be a Rack app, it has to contain the following method:
+
+```
+class App
+  def call(env)
+    [
+      200,
+      { 'Content-Length' => 25, 'Content-Type' => 'text/html' },
+      [ "<html>", "...", "</html>" ]
+    ]
+  end
+end
+```
+
+- Rails contains this method, which is why is works with Rack
+
+- [An excellent video on Rack](http://railscasts.com/episodes/151-rack-middleware?autoplay=true)
+- `rake middleware` command
 
 ### [Growing your own web Framework on rack, pt 1](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-1)
 
-- 
+- I won't make super-detailed notes for this as I've already made comprehensive notes on Rack for the articles above.
+- Here is what you need to make your Ruby code into a Rack application:
+  - Create a “rackup” file: this is a configuration file that specifies what to run and how to run it. A rackup file uses the file extension .ru.
+  - The rack application we use in the rackup file must be an Ruby object that responds to the method call(env). The call(env) method takes one argument, the environment variables for this application.
+  - The call method always returns an array, containing these 3 elements [1]:
+    - Status Code: represented by a string or some other data type that responds to to_i.
+    - Headers: these will be in the form of key-value pairs inside a hash. The key will be a header name and the corresponding value will be the value for that header.
+    - Response Body: this object can be anything, as long as that object can respond to an each method. An Enumerable object would work, as would a StringIO object, or even a custom object with an each method would work. The response should never just be a String by itself, but it must yield a String value.
 
 ### [Growing your own web Framework on rack, pt 2](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
 ### [Growing your own web Framework on rack, pt 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
@@ -54,25 +119,26 @@ SO, I'LL COME BACK TO THAT.
 
 
 
-## 3	Sinatra Documentation	Not completed
-## 4	Preparations	Not completed
-## 5	How Routes Work	Not completed
-## 6	Rendering Templates	Not completed
-## 7	Table of Contents	Not completed
-## 8	Adding a Chapter Page	Not completed
-## 9	Code Challenge: Dynamic Directory Index	Not completed
-## 10	Using Layouts	Not completed
-## 11	Route Parameters	Not completed
-## 12	Before Filters	Not completed
-## 13	View Helpers	Not completed
-## 14	Redirecting	Not completed
-## 15	Adding a Search Form	Not completed
-## 16	Improving Search	Not completed
-## 17	Code Challenge: Users and Interests	Not completed
-## 18	Server-side vs. Client-side Code	Not completed
-## 19	Optional: A Quick Analysis of How Sinatra Works	Not completed
-## 20	Summary	Not completed
-## 21	Quiz
+
+## Sinatra Documentation	Not completed
+## Preparations	Not completed
+## How Routes Work	Not completed
+## Rendering Templates	Not completed
+## Table of Contents	Not completed
+## Adding a Chapter Page	Not completed
+## Code Challenge: Dynamic Directory Index	Not completed
+## Using Layouts	Not completed
+## Route Parameters	Not completed
+## Before Filters	Not completed
+## View Helpers	Not completed
+## Redirecting	Not completed
+## Adding a Search Form	Not completed
+## Improving Search	Not completed
+## Code Challenge: Users and Interests	Not completed
+## Server-side vs. Client-side Code	Not completed
+## Optional: A Quick Analysis of How Sinatra Works	Not completed
+## Summary	Not completed
+## Quiz
 
 |  | Once | Twice | Thrice | Comprehension | Retention
 | :--- | :---: | :---: | :---: | :--- | :---
