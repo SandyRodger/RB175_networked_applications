@@ -9,7 +9,7 @@
 ## 2	[Rack](https://launchschool.com/lessons/c3578b91/assignments/2a32fe08)
 
 - Not to be confused with Rake.
-- 
+
 ### Rack applications
 
 #### WEBrick
@@ -118,6 +118,9 @@ end
 The Puma file was being given 2 arguments but iut expected 1. This was because the 2nd parameter was defined as `**options`, so when i deleted the two asterisks it ran fine. It felt great to catch that. Maybe the difference is to be found in the differing versions of Ruby? I'll ask Olly.
 
 ### [Growing your own web Framework on rack, pt 2](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
+
+- Tuesday 4th July 2023
+
 ### [Growing your own web Framework on rack, pt 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
 ### [Growing your own web Framework on rack, pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
 
