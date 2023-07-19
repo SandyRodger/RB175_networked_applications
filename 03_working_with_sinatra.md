@@ -122,6 +122,9 @@ The Puma file was being given 2 arguments but iut expected 1. This was because t
 - Tuesday 4th July 2023
 
 ### [Growing your own web Framework on rack, pt 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
+
+- Wednesday 19th July 2023
+- 
 ### [Growing your own web Framework on rack, pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
 
 
