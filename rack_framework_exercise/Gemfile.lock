@@ -5,7 +5,7 @@ GEM
     daemons (1.4.1)
     eventmachine (1.2.7)
     nio4r (2.5.9)
-    puma (6.3.0)
+    puma (4.3.12)
       nio4r (~> 2.0)
     rack (2.0.9.3)
     rackup (1.0.0)
@@ -22,7 +22,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  puma
+  puma (~> 4.3.12)
   rack (~> 2.0.1)
   rackup
   thin
