@@ -18,7 +18,7 @@
 ## What is Rack?
 
 - A ruby gem that provides an API (Application Programming Interface) between your Ruby program and the application server you're using.
-- It facilitates communication between your Rack-based Ruby app and the applications erver you're working with (which could be WEBrick, Puma, Passenger, Unicorn,Thin ...)
+- It facilitates communication between your Rack-based Ruby app and the application server you're working with (which could be WEBrick, Puma, Passenger, Unicorn,Thin ...)
 - You type in a URL or click a link and this happens:
 
 <img width="670" alt="Screenshot 2023-06-19 at 17 34 02" src="https://github.com/SandyRodger/RB175_networked_applications/assets/78854926/7ab61c2e-6aa7-4031-86ee-32ebc0669a1e">
@@ -27,7 +27,7 @@
 
 - It's a Rack-based app if it follows a set of specifications that mean Rack knows what to do with it:
   - The application must define a `call` method, which takes 1 parameter, usually called `env`.
-  - This `call` method will return and array containing 3 objects:
+  - This `call` method will return an array containing 3 objects:
     -  a String or Int that is the status code (ie `200` for OK)
     -  a Hash object that holds key-value pairs of content headers and their values
     -  an object that responds to Enumerable#each and holds the body of the response.
@@ -57,7 +57,7 @@
     - Making server side changes
     - generating dynamic content.
 - ... by taking care of lower level tasks, like handling http requests/responses.
-- It provides a standardized way for aservers and apps to communicate. It doesn't matter which app-server you're using, the configuration file stays the same.
+- It provides a standardized way for servers and apps to communicate. It doesn't matter which app-server you're using, the configuration file stays the same.
 
 ## The #call Method
 
@@ -136,14 +136,14 @@ Rack::Handler::WEBrick.run MyApp.new
 
 - So the `::run` method takes an `app` and and `options` hash argument.
 - The `options` hash lets us specify a port and host-name other than the default.
-- Different parts tackle different tasks, like opening and closing sockets. I'm not going to try and learn this completely because I think it's slightly to granular for the scope of my course.
+- Different parts tackle different tasks, like opening and closing sockets. I'm not going to try and learn this completely because I think it's slightly too granular for the scope of my course.
 
 ## Part 1: Summary
 
 - Rack is a Ruby gem that sits between the app and the app-server.
 - Rack based apps.
 - The `call` method, with its `env` argument.
-- We sent a response from our app to the browser.
+- We sent a response from our app to the browser (client).
 - We looked down another layer of abstraction to the source code to see a bit more of how Rack is doing behind the scenes.
 - In part 2 of the article we will look at how we can use Rack to stack multiple modular apps on top of each other.
 
@@ -176,7 +176,7 @@ Rack::Handler::WEBrick.run MyApp.new
   -  the response headers
   -  the response body
 - Classes that satisfy this requirement can be chained together.
-- You can have many small modular apps can be chained together to make a middleware stack.
+- You can have many small modular apps that can be chained together to make a middleware stack.
 
 ## Example of middleware
 
