@@ -15,7 +15,7 @@
 #### WEBrick
 
 - We don't want to use our own TCP server to process requests because:
-  -  There are more common/robust web-servers in existance already.
+  -  There are more common/robust web-servers in existence already.
 -  One that comes with older versions of Ruby is WEBrick.
 -  So just like using something from the `Array` class in Ruby, let's use WEBrick instead of creating our own thing.
 -  Add the following statement to your Gemfile and run `bundle install`:
