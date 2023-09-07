@@ -1,4 +1,4 @@
-[Working with Sinatra](https://launchschool.com/lessons/c3578b91/home)
+# [Working with Sinatra](https://launchschool.com/lessons/c3578b91/home)
 
 ## 1	[Introduction](https://launchschool.com/lessons/c3578b91/assignments/b0bee199)
 
