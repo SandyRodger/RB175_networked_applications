@@ -109,13 +109,13 @@ end
   - Create a “rackup” file: this is a configuration file that specifies what to run and how to run it. A rackup file uses the file extension .ru.
   - The rack application we use in the rackup file must be an Ruby object that responds to the method call(env). The call(env) method takes one argument, the environment variables for this application.
   - The call method always returns an array, containing these 3 elements [1]:
-    - Status Code: represented by a string or some other data type that responds to to_i.
+    - Status Code: represented by a string or some other data type that responds to `to_i`.
     - Headers: these will be in the form of key-value pairs inside a hash. The key will be a header name and the corresponding value will be the value for that header.
-    - Response Body: this object can be anything, as long as that object can respond to an each method. An Enumerable object would work, as would a StringIO object, or even a custom object with an each method would work. The response should never just be a String by itself, but it must yield a String value.
+    - Response Body: this object can be anything, as long as that object can respond to an `each` method. An `Enumerable` object would work, as would a `StringIO` object, or even a custom object with an `each` method would work. The response should never just be a `String` by itself, but it must yield a `String` value.
 
 #### A bug:
 
-The Puma file was being given 2 arguments but iut expected 1. This was because the 2nd parameter was defined as `**options`, so when i deleted the two asterisks it ran fine. It felt great to catch that. Maybe the difference is to be found in the differing versions of Ruby? I'll ask Olly.
+The Puma file was being given 2 arguments but it expected 1. This was because the 2nd parameter was defined as `**options`, so when I deleted the two asterisks it ran fine. It felt great to catch that. Maybe the difference is to be found in the differing versions of Ruby? I'll ask Ollie.
 
 ### [Growing your own web Framework on rack, pt 2](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
 
@@ -140,9 +140,9 @@ The Puma file was being given 2 arguments but iut expected 1. This was because t
 #### View Templates:
 
 - We need a place in our code where we can store code related to how we display things. This type of code is called the 'view template'
-- 'view templates' are seperate files. We do some pre-prossessing on the server side there and then translate the code into a string to send back to the client (usually as HTML).
+- 'view templates' are separate files. We do some pre-processing on the server side and then translate the code into a string to send back to the client (usually as HTML).
 - So now we are including HTML in the response string, but if we want to take advantage of the separation of concern that the view template gives us, how do we use this?
-- first, let's look at ERB
+- first, let's look at ERB.
 
 #### ERB
 
@@ -160,10 +160,10 @@ Note:
 - We're using the special `<%= %>` syntax.
 - The final output is pure HTML.
 
-- The `<%= =>` tags are ERB syntax used to execute Ruby code that is embedded within a string.There are two forms of this:
-  - With =
-    - `<%= =>`will evaluate the embedded Ruby code and include its return value in the HTML output. So for instance a method invokation would be good content for this tag.
-  - Without =
+- The `<%= =>` tags are ERB syntax used to execute Ruby code that is embedded within a string. There are two forms of this:
+  - With `=`
+    - `<%= =>`will evaluate the embedded Ruby code and include its return value in the HTML output. So for instance a method invocation would be good content for this tag.
+  - Without `=`
     - `<% %>` wil only evaluate the ruby code, but not include the return value in the HTML output. So a method definition would be a good candidate for this one.
    
 - ERB can process entire files, rather than just strings.
@@ -179,7 +179,7 @@ Note:
 </html>
 ```
 
-- If we had a `.rb` file saved in the same directory, we could pricess the `erb` file like this:
+- If we had a `.rb` file saved in the same directory, we could process the `erb` file like this:
 
 ```ruby
 require 'erb'
