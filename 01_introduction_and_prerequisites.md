@@ -4,7 +4,7 @@
 
 - Sinatra is a web-development framework. Its purpose is to help web-developers speed up development by automating common tasks.
 - This is great if you have experience and know what these common tasks are, but if you don't it's confusing.
-- For the following section we'll be building on what you learnt in [Packaging code into a project](https://launchschool.com/lessons/2fdb1ef0/assignments) and the [Ruby Core Tools book](https://launchschool.com/books/core_ruby_tools).
+- For the following section we'll be building on what you learnt in [Packaging code into a project](https://github.com/SandyRodger/RB130-139/blob/main/lesson_3_packaging_code_into_a_project.md) and the [Ruby Core Tools book](https://github.com/SandyRodger/launch_school_books/blob/main/ruby_core_tools.md).
 
 ## 2	[Rack](https://launchschool.com/lessons/c3578b91/assignments/2a32fe08)
 
