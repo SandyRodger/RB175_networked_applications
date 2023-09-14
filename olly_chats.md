@@ -13,3 +13,8 @@
 - discuss: 'The ethernet protocol allows for communication between two devices on a network. The internet protocol allows for communication between two devices anywhere in the world.'
 - Difference between the web and the internet.
 - Who owns/profits from DNS servers?
+
+### 17th September
+
+- I seem to have forgotten about GemSpec files. Are they really necessary? [eg](https://github.com/SandyRodger/RB130-139/blob/main/lesson_3_packaging_code_into_a_project.md)
+- 
