@@ -16,5 +16,5 @@
 
 ### 17th September
 
-- I seem to have forgotten about GemSpec files. Are they really necessary? [eg](https://github.com/SandyRodger/RB130-139/blob/main/lesson_3_packaging_code_into_a_project.md)
+- I seem to have forgotten about GemSpec files. Are they really necessary? [eg](https://github.com/SandyRodger/RB130-139/blob/main/lesson_3_packaging_code_into_a_project.md) . Is this for actually writing a Gem? https://launchschool.com/lessons/2fdb1ef0/assignments/918536a2
 - 
