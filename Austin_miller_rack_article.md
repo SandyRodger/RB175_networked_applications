@@ -20,7 +20,14 @@
   - [Part 1: Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#part-1-summary)
   - [Other notes](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#other-notes)
 
-### [Part 2: Middleware](https://aumi9292.medium.com/rack-part-ii-5dc89e9d89d8)
+### [Part 2: Middleware](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#austin-millers-article-rack-pt-2)
+
+- [What is Rack Middleware?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-is-rack-middleware)
+- [How does Middleware work?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#how-does-middleware-work)
+- [Example of middleware](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#example-of-middleware)
+- [Rack builder](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#rack-builder)
+- [Conclusion](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#conclusion)
+
 ### [Part 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
 ### [Part 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
 
