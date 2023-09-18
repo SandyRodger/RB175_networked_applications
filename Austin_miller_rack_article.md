@@ -1,8 +1,8 @@
-# [Austin Miller's Article: Rack, pt 1](https://aumi9292.medium.com/rack-part-i-6bb268dde211)
+# Austin Miller's Article: Rack, pt 1
 
 ## Content
 
-### Part 1
+### [Part 1: What is Rack and what does it do](https://aumi9292.medium.com/rack-part-i-6bb268dde211)
 
   - [What is Rack?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-is-rack)
   - [What does it mean for an app to be Rack-based?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-does-it-mean-for-an-app-to-be-rack-based)
@@ -20,7 +20,7 @@
   - [Part 1: Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#part-1-summary)
   - [Other notes](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#other-notes)
 
-### [Part 2: Middleware](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#austin-millers-article-rack-pt-2)
+### [Part 2: Middleware: what it is and what it can do for your app](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#austin-millers-article-rack-pt-2)
 
 - [What is Rack Middleware?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-is-rack-middleware)
 - [How does Middleware work?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#how-does-middleware-work)
