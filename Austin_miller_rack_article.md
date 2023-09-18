@@ -5,10 +5,10 @@
 ### Part 1
 
   - [What is it?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-is-rack)
-  - [What does it mean for an app to be Rack-based?](https://github.com/SandyRodger/RB175_networked_applications/edit/main/Austin_miller_rack_article.md#what-does-it-mean-for-an-app-to-be-rack-based)
-  - [Where it fits in server-side development.](https://github.com/SandyRodger/RB175_networked_applications/edit/main/Austin_miller_rack_article.md#where-does-it-sit-in-server-side-development)
-  - [What does Rack do for developers](https://github.com/SandyRodger/RB175_networked_applications/edit/main/Austin_miller_rack_article.md#what-does-rack-do-for-developers)
-  - [What are the benefits of using Rack?](https://github.com/SandyRodger/RB175_networked_applications/edit/main/Austin_miller_rack_article.md#what-are-the-benefits-of-using-rack)
+  - [What does it mean for an app to be Rack-based?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-does-it-mean-for-an-app-to-be-rack-based)
+  - [Where it fits in server-side development.](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#where-does-it-sit-in-server-side-development)
+  - [What does Rack do for developers](https://github.com/SandyRodger/RB175_networked_applications/edit/blob/Austin_miller_rack_article.md#what-does-rack-do-for-developers)
+  - [What are the benefits of using Rack?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-are-the-benefits-of-using-rack)
   - The frameworks devs use with Rack.
   - We will look at some Rack source code, and send some Rack source code to our browser for demonstration purposes.
 
