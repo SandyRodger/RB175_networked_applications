@@ -61,7 +61,7 @@
 
 ## The #call Method
 
-- When call is envoked, the object passed to `env` will be a hash. The hash will have all the information aboput the incoming request. (`HTTP` headers and other environment variables.
+- When call is envoked, the object passed to `env` will be a hash. The hash will have all the information about the incoming request. (`HTTP` headers and other environment variables).
 - The return value of `call` is a 3 object array used to form a response status, response headers and a response body.
 - This response then becomes the HTTP response for the client.
 
@@ -103,7 +103,7 @@ Rack::Handler::WEBrick.run MyApp.new
 ### A bug I ran into
 
 - It seems that Rack/Handler has been deprecated, so when i tried to run the `myapp.rb` file I got an error message.
-- It was solved by using Rack 2.2.0 raher than the latest Rack 3.0.8.
+- It was solved by using Rack 2.2.0 rather than the latest Rack 3.0.8.
 - The whole process is documented in [this discussion entry](https://launchschool.com/posts/98d38f95)
 
 ## env variable
@@ -120,7 +120,7 @@ Rack::Handler::WEBrick.run MyApp.new
 
 - The code above prints out the `env` variable:
 
-{"GATEWAY_INTERFACE"=>"CGI/1.1", "PATH_INFO"=>"/", "QUERY_STRING"=>"", "REMOTE_ADDR"=>"::1", "REMOTE_HOST"=>"::1", "REQUEST_METHOD"=>"GET", "REQUEST_URI"=>"http://www.localhost:8080/", "SCRIPT_NAME"=>"", "SERVER_NAME"=>"www.localhost", "SERVER_PORT"=>"8080", "SERVER_PROTOCOL"=>"HTTP/1.1", "SERVER_SOFTWARE"=>"WEBrick/1.8.1 (Ruby/3.2.1/2023-02-08)", "HTTP_HOST"=>"www.localhost:8080", "HTTP_CONNECTION"=>"keep-alive", "HTTP_CACHE_CONTROL"=>"max-age=0", "HTTP_SEC_CH_UA"=>"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"", "HTTP_SEC_CH_UA_MOBILE"=>"?0", "HTTP_SEC_CH_UA_PLATFORM"=>"\"macOS\"", "HTTP_UPGRADE_INSECURE_REQUESTS"=>"1", "HTTP_USER_AGENT"=>"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36", "HTTP_ACCEPT"=>"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "HTTP_SEC_FETCH_SITE"=>"none", "HTTP_SEC_FETCH_MODE"=>"navigate", "HTTP_SEC_FETCH_USER"=>"?1", "HTTP_SEC_FETCH_DEST"=>"document", "HTTP_ACCEPT_ENCODING"=>"gzip, deflate, br", "HTTP_ACCEPT_LANGUAGE"=>"en-GB,en-US;q=0.9,en;q=0.8", "rack.version"=>[1, 3], "rack.input"=>#<StringIO:0x000000010740b250>, "rack.errors"=>#<IO:<STDERR>>, "rack.multithread"=>true, "rack.multiprocess"=>false, "rack.run_once"=>false, "rack.url_scheme"=>"http", "rack.hijack?"=>true, "rack.hijack"=>#<Proc:0x000000010740a8c8 /Users/sandyboy/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/rack-2.2.0/lib/rack/handler/webrick.rb:83 (lambda)>, "rack.hijack_io"=>nil, "HTTP_VERSION"=>"HTTP/1.1", "REQUEST_PATH"=>"/"}
+`{"GATEWAY_INTERFACE"=>"CGI/1.1", "PATH_INFO"=>"/", "QUERY_STRING"=>"", "REMOTE_ADDR"=>"::1", "REMOTE_HOST"=>"::1", "REQUEST_METHOD"=>"GET", "REQUEST_URI"=>"http://www.localhost:8080/", "SCRIPT_NAME"=>"", "SERVER_NAME"=>"www.localhost", "SERVER_PORT"=>"8080", "SERVER_PROTOCOL"=>"HTTP/1.1", "SERVER_SOFTWARE"=>"WEBrick/1.8.1 (Ruby/3.2.1/2023-02-08)", "HTTP_HOST"=>"www.localhost:8080", "HTTP_CONNECTION"=>"keep-alive", "HTTP_CACHE_CONTROL"=>"max-age=0", "HTTP_SEC_CH_UA"=>"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"", "HTTP_SEC_CH_UA_MOBILE"=>"?0", "HTTP_SEC_CH_UA_PLATFORM"=>"\"macOS\"", "HTTP_UPGRADE_INSECURE_REQUESTS"=>"1", "HTTP_USER_AGENT"=>"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36", "HTTP_ACCEPT"=>"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "HTTP_SEC_FETCH_SITE"=>"none", "HTTP_SEC_FETCH_MODE"=>"navigate", "HTTP_SEC_FETCH_USER"=>"?1", "HTTP_SEC_FETCH_DEST"=>"document", "HTTP_ACCEPT_ENCODING"=>"gzip, deflate, br", "HTTP_ACCEPT_LANGUAGE"=>"en-GB,en-US;q=0.9,en;q=0.8", "rack.version"=>[1, 3], "rack.input"=>#<StringIO:0x000000010740b250>, "rack.errors"=>#<IO:<STDERR>>, "rack.multithread"=>true, "rack.multiprocess"=>false, "rack.run_once"=>false, "rack.url_scheme"=>"http", "rack.hijack?"=>true, "rack.hijack"=>#<Proc:0x000000010740a8c8 /Users/sandyboy/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/rack-2.2.0/lib/rack/handler/webrick.rb:83 (lambda)>, "rack.hijack_io"=>nil, "HTTP_VERSION"=>"HTTP/1.1", "REQUEST_PATH"=>"/"}`
 
 - This is the HTTP request broken down.
 - It is also information that rack appends to the HTTP request. (Everything from "rack.version"=>[1, 3])
@@ -134,7 +134,7 @@ Rack::Handler::WEBrick.run MyApp.new
 
 <img width="598" alt="Screenshot 2023-06-26 at 22 06 17" src="https://github.com/SandyRodger/RB175_networked_applications/assets/78854926/b2e3a56d-5d7d-4f32-9cc0-cda9ba8d30ff">
 
-- So the `::run` method takes an `app` and and `options` hash argument.
+- So the `::run` method takes an `app` and an `options` hash argument.
 - The `options` hash lets us specify a port and host-name other than the default.
 - Different parts tackle different tasks, like opening and closing sockets. I'm not going to try and learn this completely because I think it's slightly too granular for the scope of my course.
 
@@ -154,16 +154,16 @@ Rack::Handler::WEBrick.run MyApp.new
 
 # [Austin Miller's Article: Rack, pt 2](https://aumi9292.medium.com/rack-part-ii-5dc89e9d89d8)
 
-  - What qualifies a Ruby application to be a Rack middleware
-  - What middlewares can do for your application
-  - Two Rack middleware applications for my_app.rb
+  - What qualifies a Ruby application to be a Rack middleware.
+  - What middlewares can do for your application.
+  - Two Rack middleware applications for my_app.rb.
 
 ## What is Rack Middleware?
 
 - Rack lets you chain Rack-based classes together.
 - It also works with other servers to handle necessary socket programming to start a server.
 - You can write your own Rack-based app or you can take a "middleware" from a rack library.
-- Rack middleware allows devs to build-in functionality to their apps (ie logging-in authentication or stopping spam) before they even start coding their app.
+- Rack middleware allows devs to build-in functionality to their apps (ie. logging-in authentication or stopping spam) before they even start coding their app.
 - Kind of like a Ruby gem ?
 - Here's a list of some:
 
@@ -172,9 +172,9 @@ Rack::Handler::WEBrick.run MyApp.new
 ## How does Middleware work?
 
 - The `call` method has to return an array with 3 objects, used to form:
-  -  the response status
-  -  the response headers
-  -  the response body
+  -  the response status.
+  -  the response headers.
+  -  the response body.
 - Classes that satisfy this requirement can be chained together.
 - You can have many small modular apps that can be chained together to make a middleware stack.
 
@@ -203,7 +203,7 @@ end
 Rack::Handler::WEBrick.run FriendlyGreeting.new(MyApp.new)
 ```
 
-- OK, so we create an instance of the `FriendlyGreeting` class, passing in a `MyApp` object as an argument and pass all that as an argument to the `::WEBrick.run` method. Simple method chaining. Easy.
+- OK, so we create an instance of the `FriendlyGreeting` class, passing in a `MyApp` object as an argument and pass all that as an argument to the `::WEBrick.run` method. Simple method-chaining. Easy.
 
 ## Rack builder
 
