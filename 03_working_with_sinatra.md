@@ -1,4 +1,4 @@
-[Working with Sinatra](https://launchschool.com/lessons/c3578b91/home)
+# [Working with Sinatra](https://launchschool.com/lessons/c3578b91/home)
 
 ## 1	[Introduction](https://launchschool.com/lessons/c3578b91/assignments/b0bee199)
 
@@ -104,7 +104,6 @@ end
 
 ### [Growing your own web Framework on rack, pt 1](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-1)
 
-- I won't make super-detailed notes for this as I've already made comprehensive notes on Rack for the articles above.
 - Here is what you need to make your Ruby code into a Rack application:
   - Create a “rackup” file: this is a configuration file that specifies what to run and how to run it. A rackup file uses the file extension .ru.
   - The rack application we use in the rackup file must be an Ruby object that responds to the method call(env). The call(env) method takes one argument, the environment variables for this application.
@@ -115,7 +114,7 @@ end
 
 #### A bug:
 
-The Puma file was being given 2 arguments but iut expected 1. This was because the 2nd parameter was defined as `**options`, so when i deleted the two asterisks it ran fine. It felt great to catch that. Maybe the difference is to be found in the differing versions of Ruby? I'll ask Olly.
+The Puma file was being given 2 arguments but it expected 1. This was because the 2nd parameter was defined as `**options`, so when i deleted the two asterisks it ran fine. It felt great to catch that. Maybe the difference is to be found in the differing versions of Ruby? I'll ask Olly.
 
 ### [Growing your own web Framework on rack, pt 2](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
 
@@ -123,12 +122,64 @@ The Puma file was being given 2 arguments but iut expected 1. This was because t
 
 ### [Growing your own web Framework on rack, pt 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
 
-- Wednesday 19th July 2023
-- 
+- This section is about separating the tasks of our core routing logic and our views. This means:
+  - Introducing the `ERB` library, which helps us turn Ruby into HTML.
+  - Updating our app code to include view templates.
+ 
+## View Templates
+
+- We need somewhere to store/handle the code relating to displaying.
+- This is called a 'view template' and is kept in a separate file that allows us to do some pre-processing on the server-side in a programming language and then translate that programming code into a string to return to the client (usually as HTML).
+- At this point we are including HTML within the string response of our program. The string has string interpolation within it, so its content is dynamic.
+- If we want to have 'sepoaration of concern' - ie. keeping things in their own boxes - then read on...
+
+
+## ERB
+
+- Embedded Ruby is a templating library.
+- It allows us to embed Ruby directly into HTML.
+- ERB takes a special syntax mixing Ruby and HTML and outputs a pure HTML string.
+- In IRB this looks like this:
+
+![Screenshot 2023-09-18 at 11 45 43](https://github.com/SandyRodger/RB175_networked_applications/assets/78854926/8a4de9c7-1609-4086-b95b-a6f510303eca)
+
+- Notice the new ERB template object is a mixture of Ruby and HTML. We use `<%= %>` to let ERB know how to process this Ruby embedded in the string.
+  - With the `=` sign evaluates the Ruby code and includes the return value (`<%= names.sample %>`).
+  - Without the `=` sign just evaluates the code (<% log_time_method %>)
+- ERB can process entire files, not just strings. These files end with a `.erb` extention, and use the same tags to embed Ruby.
+- For example:
+```ERB
+<% names = ['bob', 'joe', 'kim', 'jill'] %>
+<html>
+  <body>
+    <h4>Hello, my name is <%= names.sample %></h4>
+  </body>
+</html>
+```
+- Which could be run thus:
+```ruby
+require 'erb'
+template_file = File.read('example.erb')
+erb = ERB.new(template_file)
+erb.result
+```
+
+- The result looks like this:
+
+  `"\n<html>\n  <body>\n    <h4>Hello, my name is bob</h4>\n  </body>\n</html>"`
+
+## Adding in View Templates
+
+- We create a view template called `index.erb` within a `views` folder containing the following:
+```
+<html>
+  <body>
+    <h2>Hello World!</h2>
+  </body>
+</html>
+```
+
 ### [Growing your own web Framework on rack, pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
-
-
-
 
 ## Sinatra Documentation	
 ## Preparations
