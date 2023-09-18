@@ -4,13 +4,21 @@
 
 ### Part 1
 
-  - [What is it?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-is-rack)
+  - [What is Rack?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-is-rack)
   - [What does it mean for an app to be Rack-based?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-does-it-mean-for-an-app-to-be-rack-based)
   - [Where it fits in server-side development.](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#where-does-it-sit-in-server-side-development)
-  - [What does Rack do for developers](https://github.com/SandyRodger/RB175_networked_applications/edit/blob/Austin_miller_rack_article.md#what-does-rack-do-for-developers)
+  - [What does Rack do for developers?](https://github.com/SandyRodger/RB175_networked_applications/edit/blob/Austin_miller_rack_article.md#what-does-rack-do-for-developers)
   - [What are the benefits of using Rack?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-are-the-benefits-of-using-rack)
-  - The frameworks devs use with Rack.
-  - We will look at some Rack source code, and send some Rack source code to our browser for demonstration purposes.
+  - [The #call Method](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#the-call-method)
+  - [What else does Rack need?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#what-else-does-rack-need)
+  - [Examples of Rack](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#examples-of-rack)
+    - [Minimum Rack](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#minimum-rack)
+    - [HTML Rack](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#html-rack)
+    - [A bug I ran into](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#a-bug-i-ran-into)
+  - [env variable](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#env-variable)  
+  - [A look at the Rack source code](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#a-look-at-the-rack-source-code)
+  - [Part 1: Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#part-1-summary)
+  - [Other notes](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#other-notes)
 
 ### [Part 2: Middleware](https://aumi9292.medium.com/rack-part-ii-5dc89e9d89d8)
 ### [Part 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
