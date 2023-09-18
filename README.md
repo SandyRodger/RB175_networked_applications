@@ -1,5 +1,15 @@
 # [RB175_networked_applications](https://launchschool.com/courses/26d33169/home)
 
+## 1. Introduction and Prerequisites
+## 2. Handling requests Manually
+## 3. Working with Sinatra
+## 4. Deploying Sinatra Applications
+## 5. Project: tools
+## 6. Securing Applications
+## 7. Adding JavaScript
+## 8. Project: File-based CMS
+## 9. Optional Projects
+
 ## Overview
 
 |  | Once | Twice | Thrice | Comprehension | Retention
