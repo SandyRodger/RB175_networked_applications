@@ -101,6 +101,8 @@ end
 Rack::Handler::WEBrick.run MyApp.new
 ```
 
+- Hiccup: This code-along exercise says to run this file and cause a server on port 8080  to start listening for incoming requests from a client. So one then types `http://www.localhost:8080` into a browser and 'hello world' appears. This works with Google chrome browser, but not with Safari. 
+
 ### HTML Rack
 
 ```ruby
