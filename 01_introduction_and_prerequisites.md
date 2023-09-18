@@ -206,7 +206,8 @@ erb.result
 
 ### [Growing your own web Framework on rack, pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
 
-
+- This part is about finishing-up/optimising the final product.
+- We will also extract some general functionality to a custom framework.
 
 
 ## Sinatra Documentation	
