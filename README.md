@@ -2,6 +2,16 @@
 
 ## 1. Introduction and Prerequisites
 ## 2. Handling requests Manually
+Handling Requests Manually
+Introduction
+Coding Along with This Course
+A Simple Echo Server
+Parsing Path and Parameters
+Sending a Complete Response
+Persisting State in the URL
+Dealing with Empty Requests
+Summary
+Overview
 ## 3. Working with Sinatra
 1 Introduction
 2 Rack
