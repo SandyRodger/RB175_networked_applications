@@ -28,8 +28,8 @@
 - [Rack builder](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#rack-builder)
 - [Conclusion](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#conclusion)
 
-### [Part 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
-### [Part 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
+### [Part 3]()
+### [Part 4]()
 
 ## What is Rack?
 
@@ -323,3 +323,7 @@ end
   - Generalizes application-to-server communication:
     - All Rack based apps (whether written in Sinatra, rails, etc) can establish socket connections (Puma, WEBrick, Passenger).
   - Provides an architechture for using modular pieces of functionality.
+  - 
+
+# [Part 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
+# [Part 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
