@@ -28,8 +28,8 @@
 - [Rack builder](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#rack-builder)
 - [Conclusion](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#conclusion)
 
-### [Part 3]()
-### [Part 4]()
+### [Part 3: how to separate out our application logic from our view related code](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#part-3)
+### [Part 4: Cleaning up and optimizing our application](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#part-4)
 
 ## What is Rack?
 
