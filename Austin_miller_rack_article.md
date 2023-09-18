@@ -12,8 +12,9 @@
   - The frameworks devs use with Rack.
   - We will look at some Rack source code, and send some Rack source code to our browser for demonstration purposes.
 
-### [Part 2: Middleware](https://github.com/SandyRodger/RB175_networked_applications/edit/main/Austin_miller_rack_article.md#austin-millers-article-rack-pt-2)
-
+### [Part 2: Middleware](https://aumi9292.medium.com/rack-part-ii-5dc89e9d89d8)
+### [Part 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
+### [Part 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
 
 ## What is Rack?
 
