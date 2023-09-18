@@ -222,7 +222,11 @@ end
 Rack::Handler::WEBrick.run FriendlyGreeting.new(MyApp.new)
 ```
 
-- OK, so we create an instance of the `FriendlyGreeting` class, passing in a `MyApp` object as an argument and pass all that as an argument to the `::WEBrick.run` method. Simple method-chaining. Easy.
+- Middleware applications must have an initialize method that takes one argument.
+- When `::new` is invoked on `FriendlyGreeting`, an instance of that app one level down the chain (so the return value of `MyApp.call` ?) will be passed in.
+- We invoke `Array#last` to access the 3rd element of the return value of `MyApp#call`, which is the response body. Then we prepend it with another string and a new line.
+- OK, so we create an instance of the `FriendlyGreeting` class, passing in a `MyApp` object as an argument and pass all that as an argument to the `::WEBrick.run` method. Simple method-chaining:
+  - `MyApp.new` --> `FriendlyGreeting.new` --> `WEBrick`
 
 ## Rack builder
 
