@@ -1,6 +1,6 @@
 # [RB175_networked_applications](https://launchschool.com/courses/26d33169/home)
 
-## 1. [Introduction and Prerequisites](https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md#introduction-and-prerequisites)
+## [1. Introduction and Prerequisites](https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md#introduction-and-prerequisites)
 - [About this course](https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md#about-this-course)
   - [Backend assessment](https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md#backend-assessment)
   - [What to focus on](https://github.com/SandyRodger/RB175_networked_applications/blob/main/01_introduction_and_prerequisites.md#what-to-focus-on)
