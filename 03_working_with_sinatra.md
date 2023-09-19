@@ -102,7 +102,9 @@ end
 - [An excellent video on Rack](http://railscasts.com/episodes/151-rack-middleware?autoplay=true)
 - `rake middleware` command
 
-### [Growing your own web Framework on rack, pt 1](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-1)
+### Growing your own web Framework on rack
+
+- [pt 1](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-1)
 
 - Here is what you need to make your Ruby code into a Rack application:
   - Create a “rackup” file: this is a configuration file that specifies what to run and how to run it. A rackup file uses the file extension `.ru`.
@@ -111,22 +113,22 @@ end
     - Status Code: represented by a string or some other data type that responds to to_i.
     - Headers: these will be in the form of key-value pairs inside a hash. The key will be a header name and the corresponding value will be the value for that header.
     - Response Body: this object can be anything, as long as that object can respond to an each method. An Enumerable object would work, as would a StringIO object, or even a custom object with an each method would work. The response should never just be a String by itself, but it must yield a String value.
-
-#### A bug:
+- A bug:
 
 The Puma file was being given 2 arguments but it expected 1. This was because the 2nd parameter was defined as `**options`, so when i deleted the two asterisks it ran fine. It felt great to catch that. Maybe the difference is to be found in the differing versions of Ruby? I'll ask Olly.
-
-### [Growing your own web Framework on rack, pt 2: routing](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
+- [pt 2: routing](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
 
 - We build up the basic app by introduciing 'routing'. This means adding other pages to our application.
-
-### [Growing your own web Framework on rack, pt 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
+- When the browser's path is...
+  - `/` we return 'hello world'.
+  - '/advice' we return a piece of advice.
+  - anything else a '404' error code.
+- [pt 3: seperating application logic from viewing code](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
 
 - This section is about separating the tasks of our core routing logic and our views. This means:
   - Introducing the `ERB` library, which helps us turn Ruby into HTML.
   - Updating our app code to include view templates.
- 
-## View Templates
+ - View Templates
 
 - We need somewhere to store/handle the code relating to displaying.
 - This is called a 'view template' and is kept in a separate file that allows us to do some pre-processing on the server-side in a programming language and then translate that programming code into a string to return to the client (usually as HTML).
@@ -134,7 +136,7 @@ The Puma file was being given 2 arguments but it expected 1. This was because th
 - If we want to have 'sepoaration of concern' - ie. keeping things in their own boxes - then read on...
 
 
-## ERB
+- ERB
 
 - Embedded Ruby is a templating library.
 - It allows us to embed Ruby directly into HTML.
@@ -168,7 +170,7 @@ erb.result
 
   `"\n<html>\n  <body>\n    <h4>Hello, my name is bob</h4>\n  </body>\n</html>"`
 
-## Adding in View Templates
+- Adding in View Templates
 
 - We create a view template called `index.erb` within a `views` folder containing the following:
 ```
@@ -178,8 +180,7 @@ erb.result
   </body>
 </html>
 ```
-
-### [Growing your own web Framework on rack, pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
+- [pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
 
 ## Sinatra Documentation	
 ## Preparations
