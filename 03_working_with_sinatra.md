@@ -104,7 +104,7 @@ end
 
 ### Growing your own web Framework on rack
 
-- [pt 1](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-1)
+### [pt 1](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-1)
 
 - Here is what you need to make your Ruby code into a Rack application:
   - Create a “rackup” file: this is a configuration file that specifies what to run and how to run it. A rackup file uses the file extension `.ru`.
@@ -116,40 +116,41 @@ end
 - A bug:
 
 The Puma file was being given 2 arguments but it expected 1. This was because the 2nd parameter was defined as `**options`, so when i deleted the two asterisks it ran fine. It felt great to catch that. Maybe the difference is to be found in the differing versions of Ruby? I'll ask Olly.
-- [pt 2: routing](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
+### [pt 2: routing](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
 
 - We build up the basic app by introduciing 'routing'. This means adding other pages to our application.
 - When the browser's path is...
   - `/` we return 'hello world'.
   - '/advice' we return a piece of advice.
   - anything else a '404' error code.
-- [pt 3: seperating application logic from viewing code](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
+### [pt 3: seperating application logic from viewing code](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
 
 - This section is about separating the tasks of our core routing logic and our views. This means:
   - Introducing the `ERB` library, which helps us turn Ruby into HTML.
   - Updating our app code to include view templates.
- - View Templates
 
-- We need somewhere to store/handle the code relating to displaying.
-- This is called a 'view template' and is kept in a separate file that allows us to do some pre-processing on the server-side in a programming language and then translate that programming code into a string to return to the client (usually as HTML).
-- At this point we are including HTML within the string response of our program. The string has string interpolation within it, so its content is dynamic.
-- If we want to have 'sepoaration of concern' - ie. keeping things in their own boxes - then read on...
-
-
+- View Templates
+  - We need somewhere to store/handle the code relating to displaying.
+  - This is called a 'view template' and is kept in a separate file that allows us to do some pre-processing on the server-side in a programming language and then translate that programming code into a string to return to the client (usually as HTML).
+  - At this point we are including HTML within the string response of our program. The string has string interpolation within it, so its content is dynamic.
+  - If we want to have 'separation of concern' - ie. keeping things in their own boxes - then read on...
 - ERB
-
-- Embedded Ruby is a templating library.
-- It allows us to embed Ruby directly into HTML.
-- ERB takes a special syntax mixing Ruby and HTML and outputs a pure HTML string.
-- In IRB this looks like this:
+  - Embedded Ruby is a templating library.
+  - To use this we need:
+    - `require 'erb'`
+    - Create an ERB template object and pass in a string using the special syntax.
+    - Invoke the ERB instance method `result` which outputs pure HTML.
+  - It allows us to embed Ruby directly into HTML.
+  - ERB takes a special syntax mixing Ruby and HTML and outputs a pure HTML string.
+  - In IRB this looks like this:
 
 ![Screenshot 2023-09-18 at 11 45 43](https://github.com/SandyRodger/RB175_networked_applications/assets/78854926/8a4de9c7-1609-4086-b95b-a6f510303eca)
 
-- Notice the new ERB template object is a mixture of Ruby and HTML. We use `<%= %>` to let ERB know how to process this Ruby embedded in the string.
-  - With the `=` sign evaluates the Ruby code and includes the return value (`<%= names.sample %>`).
-  - Without the `=` sign just evaluates the code (<% log_time_method %>)
-- ERB can process entire files, not just strings. These files end with a `.erb` extention, and use the same tags to embed Ruby.
-- For example:
+  - Notice the new ERB template object is a mixture of Ruby and HTML. We use `<%= %>` to let ERB know how to process this Ruby embedded in the string.
+    - With the `=` sign evaluates the Ruby code and includes the return value (`<%= names.sample %>`).
+    - Without the `=` sign just evaluates the code (<% log_time_method %>)
+  - ERB can process entire files, not just strings. These files end with a `.erb` extention, and use the same tags to embed Ruby.
+  - For example:
 ```ERB
 <% names = ['bob', 'joe', 'kim', 'jill'] %>
 <html>
@@ -158,7 +159,7 @@ The Puma file was being given 2 arguments but it expected 1. This was because th
   </body>
 </html>
 ```
-- Which could be run thus:
+  - Which could be run thus:
 ```ruby
 require 'erb'
 template_file = File.read('example.erb')
@@ -166,7 +167,7 @@ erb = ERB.new(template_file)
 erb.result
 ```
 
-- The result looks like this:
+  - The result looks like this:
 
   `"\n<html>\n  <body>\n    <h4>Hello, my name is bob</h4>\n  </body>\n</html>"`
 
@@ -180,10 +181,25 @@ erb.result
   </body>
 </html>
 ```
-- [pt 4](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
 
-## Sinatra Documentation	
-## Preparations
+- So that the main webpage renders to a h2.
+
+### [pt 4 - cleaning up and optimising the app](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-4)
+
+- Cleaning up the #call method
+- Adding more View Templates
+- Refactoring and streamlining our application.
+- Start of a framework.
+- Conclusion.  
+
+## [Sinatra Documentation](https://sinatrarb.com/intro.html)
+
+- I don't really know what to do with this web-page. I'll come back to it.
+
+## [Preparations](https://launchschool.com/lessons/c3578b91/assignments/80745ebb)
+
+- Building a small, mobile0friendly e-book using Sinatra.
+
 ## How Routes Work
 ## Rendering Templates
 ## Table of Contents
@@ -205,7 +221,7 @@ erb.result
 |  | Once | Twice | Thrice | Comprehension | Retention
 | :--- | :---: | :---: | :---: | :--- | :---
 |1	Introduction|	19.6.23|
-|2	Rack	| 19.6.23|
+|2	Rack	| 19.6.23|19.9.23|
 |3	Sinatra Documentation|
 |4	Preparations|
 |5	How Routes Work|
