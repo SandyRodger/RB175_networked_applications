@@ -105,7 +105,7 @@ end
 ### [Growing your own web Framework on rack, pt 1](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-1)
 
 - Here is what you need to make your Ruby code into a Rack application:
-  - Create a “rackup” file: this is a configuration file that specifies what to run and how to run it. A rackup file uses the file extension .ru.
+  - Create a “rackup” file: this is a configuration file that specifies what to run and how to run it. A rackup file uses the file extension `.ru`.
   - The rack application we use in the rackup file must be an Ruby object that responds to the method call(env). The call(env) method takes one argument, the environment variables for this application.
   - The call method always returns an array, containing these 3 elements [1]:
     - Status Code: represented by a string or some other data type that responds to to_i.
@@ -116,9 +116,9 @@ end
 
 The Puma file was being given 2 arguments but it expected 1. This was because the 2nd parameter was defined as `**options`, so when i deleted the two asterisks it ran fine. It felt great to catch that. Maybe the difference is to be found in the differing versions of Ruby? I'll ask Olly.
 
-### [Growing your own web Framework on rack, pt 2](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
+### [Growing your own web Framework on rack, pt 2: routing](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-2)
 
-- Tuesday 4th July 2023
+- We build up the basic app by introduciing 'routing'. This means adding other pages to our application.
 
 ### [Growing your own web Framework on rack, pt 3](https://launchschool.com/blog/growing-your-own-web-framework-with-rack-part-3)
 
