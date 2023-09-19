@@ -18,3 +18,8 @@
 
 - I seem to have forgotten about GemSpec files. Are they really necessary? [eg](https://github.com/SandyRodger/RB130-139/blob/main/lesson_3_packaging_code_into_a_project.md) . Is this for actually writing a Gem? https://launchschool.com/lessons/2fdb1ef0/assignments/918536a2
 - 
+
+### 21st September
+
+- Error message, content length should be 60 instead of 61? [here](https://launchschool.medium.com/growing-your-own-web-framework-with-rack-part-4-a4a4da2967a2)
+- ERB and Rake in your daily workflow.
