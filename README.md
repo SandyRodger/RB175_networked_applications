@@ -50,7 +50,7 @@
   - [Conclusion](https://github.com/SandyRodger/RB175_networked_applications/blob/main/Austin_miller_rack_article.md#conclusion)
 
 #### [What is Rack in Ruby/Rails? blog](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#what-is-rack-in-rubyrails-blog)
-#### [Growing your own web Framework on rack](Growing your own web Framework on rack)
+#### [Growing your own web Framework on rack](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#growing-your-own-web-framework-on-rack)
 #### [pt 1](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#pt-1)
 #### [pt 2: routing](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#pt-2-routing)
 #### [pt 3: seperating application logic from viewing code](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#pt-3-seperating-application-logic-from-viewing-code)
