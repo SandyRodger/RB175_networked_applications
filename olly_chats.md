@@ -22,4 +22,7 @@
 ### 21st September
 
 - Error message, content length should be 60 instead of 61? [here](https://launchschool.medium.com/growing-your-own-web-framework-with-rack-part-4-a4a4da2967a2)
-- ERB and Rake in your daily workflow.
+- ERB and Rack in your daily workflow.
+- ERB is just the same as String interpolation. [no?](https://launchschool.com/lessons/c3578b91/assignments/d6969b5b0)
+- Also, these exercises work on Chrome, but not Safari. Is that a problem?
+- Rack v Rake.
