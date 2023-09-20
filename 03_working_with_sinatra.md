@@ -222,7 +222,7 @@ erb.result
 | :--- | :---: | :---: | :---: | :--- | :---
 |1	Introduction|	19.6.23|
 |2	Rack	| 19.6.23|19.9.23|
-|3	Sinatra Documentation|
+|3	Sinatra Documentation|19.9.23|
 |4	Preparations|
 |5	How Routes Work|
 |6	Rendering Templates|
