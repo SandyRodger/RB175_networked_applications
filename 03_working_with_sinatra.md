@@ -192,19 +192,70 @@ erb.result
 - Start of a framework.
 - Conclusion.  
 
-## [Sinatra Documentation](https://sinatrarb.com/intro.html)
+## [3. Sinatra Documentation](https://sinatrarb.com/intro.html)
 
 - I don't really know what to do with this web-page. I'll come back to it.
 
-## [Preparations](https://launchschool.com/lessons/c3578b91/assignments/80745ebb)
+## [4. Preparations](https://launchschool.com/lessons/c3578b91/assignments/80745ebb)
 
-- Building a small, mobile0friendly e-book using Sinatra.
+- Building a small, mobile-friendly e-book using Sinatra.
 
-## How Routes Work
-## Rendering Templates
-## Table of Contents
-## Adding a Chapter Page
-## Code Challenge: Dynamic Directory Index
+### Sinatra and Web Frameworks
+
+- This section describes how TCP, Rack, WEBrick and Sinatra interact.
+- Sinatra is a Rack-based development framework.
+- Rack-based means that it uses Rack to connect ot a web-server, such as WEBrick.
+- Sinatra also provides conventions for where to place your application-code.
+- It comes with many features to make my job easier, such as:
+  - routing.
+  - view-templates.
+  - and many more.
+
+![Screenshot 2023-09-20 at 08 41 05](https://github.com/SandyRodger/RB175_networked_applications/assets/78854926/c6b55a25-ffa9-4f2a-9a6a-26ab2a0598e0)
+
+- At its core this is just some Ruby code connecting to a TCP server, handling requests and sending back responses in HTTP-compliant strings. 
+
+## [How Routes Work](https://launchschool.com/lessons/c3578b91/assignments/e17701ee)
+
+- Sinatra provides a DSL for definint 'routes', which are how a dev maps a URL pattern to some Ruby code.
+- For example:
+
+``` ruby
+require "sinatra"
+require "sinatra/reloader"
+
+get "/" do
+  File.read "public/template.html"
+end
+```
+
+- In this example we require Sinatra and sinatra/reloader, which causes the app to reload its files every time we load a page. This makes development smoother.
+- `get "/" do` states a route that matches the URL "/". When a user visits that path on the app, Sinatra will execute the body of the block.
+- The string returned by the `File.read` method is then returned by the block and sent by Sinatra to the browser in response to the `get` request for the `/` route.
+
+- [An interesting page explaining files](https://launchschool.com/gists/630c1024)
+
+## [Rendering Templates](https://launchschool.com/lessons/c3578b91/assignments/d6969b5b)
+
+- Here we attempt to render a template, with dynamioc values, rather than a static file.
+- Templates (AKA 'view-templates') are files that contain text that is converted into HTML before being sent to a user's browser in a response.
+- THere are different templating language, we'll use ERB.
+- This section explains ERB, but we've already looked at ERB [here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#pt-3-seperating-application-logic-from-viewing-code). It seems to basically be string interpolation.
+- ERB is also the default templating language for Ruby on Rails.
+- An example of ERB printing a dynamic value: `<h1><%= @title %></h1>`. Without the `=` the code is run, but the return value not printed.
+
+## [Table of Contents](https://launchschool.com/lessons/c3578b91/assignments/7ef83dcf)
+
+- I peaked at the final two solutions.
+
+## [Adding a Chapter Page](https://launchschool.com/lessons/c3578b91/assignments/bc383885)
+
+- Peaked at all the solutions...
+
+## [Code Challenge: Dynamic Directory Index](https://launchschool.com/lessons/c3578b91/assignments/d703af4a)
+
+- 
+
 ## Using Layouts
 ## Route Parameters
 ## Before Filters
