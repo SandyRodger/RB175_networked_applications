@@ -217,7 +217,7 @@ erb.result
 
 ## [How Routes Work](https://launchschool.com/lessons/c3578b91/assignments/e17701ee)
 
-- Sinatra provides a DSL for definint 'routes', which are how a dev maps a URL pattern to some Ruby code.
+- Sinatra provides a DSL for defining 'routes', which are how a dev maps a URL pattern to some Ruby code.
 - For example:
 
 ``` ruby
@@ -237,9 +237,9 @@ end
 
 ## [Rendering Templates](https://launchschool.com/lessons/c3578b91/assignments/d6969b5b)
 
-- Here we attempt to render a template, with dynamioc values, rather than a static file.
+- Here we attempt to render a template, with dynamic values, rather than a static file.
 - Templates (AKA 'view-templates') are files that contain text that is converted into HTML before being sent to a user's browser in a response.
-- THere are different templating language, we'll use ERB.
+- There are different templating language, we'll use ERB.
 - This section explains ERB, but we've already looked at ERB [here](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#pt-3-seperating-application-logic-from-viewing-code). It seems to basically be string interpolation.
 - ERB is also the default templating language for Ruby on Rails.
 - An example of ERB printing a dynamic value: `<h1><%= @title %></h1>`. Without the `=` the code is run, but the return value not printed.
@@ -256,7 +256,10 @@ end
 
 - 
 
-## Using Layouts
+## [Using Layouts](https://launchschool.com/lessons/c3578b91/assignments/371514e7)
+
+- 
+
 ## Route Parameters
 ## Before Filters
 ## View Helpers
@@ -274,12 +277,12 @@ end
 |1	Introduction|	19.6.23|
 |2	Rack	| 19.6.23|19.9.23|
 |3	Sinatra Documentation|19.9.23|
-|4	Preparations|
-|5	How Routes Work|
-|6	Rendering Templates|
-|7	Table of Contents|
-|8	Adding a Chapter Page|
-|9	Code Challenge: Dynamic Directory Index|
+|4	Preparations|20.9.23|
+|5	How Routes Work|20.9.23|
+|6	Rendering Templates|20.9.23|
+|7	Table of Contents|20.9.23|
+|8	Adding a Chapter Page|20.9.23|
+|9	Code Challenge: Dynamic Directory Index| 21.9.23
 |10	Using Layouts|
 |11	Route Parameters|
 |12	Before Filters|
