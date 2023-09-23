@@ -254,18 +254,36 @@ end
 
 ## [Code Challenge: Dynamic Directory Index](https://launchschool.com/lessons/c3578b91/assignments/d703af4a)
 
-- 
+- ...
 
 ## [Using Layouts](https://launchschool.com/lessons/c3578b91/assignments/371514e7)
 
+- I need to go over this again for sure.
+
+## [Route Parameters](https://launchschool.com/lessons/c3578b91/assignments/687874590)
+
+- yup
+
+## [Before Filters](https://launchschool.com/lessons/c3578b91/assignments/801b30c3)
+
+- tick
+
+## [View Helpers](https://launchschool.com/lessons/c3578b91/assignments/517ff8ae)
+
+- done
+
+## [Redirecting](https://launchschool.com/lessons/c3578b91/assignments/a648853a)
+
 - 
 
-## Route Parameters
-## Before Filters
-## View Helpers
-## Redirecting
-## Adding a Search Form
-## Improving Search
+## [Adding a Search Form](https://launchschool.com/lessons/c3578b91/assignments/f2358cb8)
+
+-
+
+## [Improving Search](https://launchschool.com/lessons/c3578b91/assignments/13a608d9)
+
+-
+
 ## Code Challenge: Users and Interests
 ## Server-side vs. Client-side Code
 ## Optional: A Quick Analysis of How Sinatra Works
@@ -283,9 +301,9 @@ end
 |7	Table of Contents|20.9.23|
 |8	Adding a Chapter Page|20.9.23|
 |9	Code Challenge: Dynamic Directory Index| 21.9.23
-|10	Using Layouts|
-|11	Route Parameters|
-|12	Before Filters|
+|10	Using Layouts|22.9.23|
+|11	Route Parameters|22.9.23|
+|12	Before Filters|22.9.23|
 |13	View Helpers|
 |14	Redirecting|
 |15	Adding a Search Form|
