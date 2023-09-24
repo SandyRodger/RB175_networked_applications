@@ -284,7 +284,10 @@ end
 
 -
 
-## Code Challenge: Users and Interests
+## [Code Challenge: Users and Interests](https://launchschool.com/lessons/c3578b91/assignments/36890ee9)
+
+- 
+
 ## Server-side vs. Client-side Code
 ## Optional: A Quick Analysis of How Sinatra Works
 ## Summary
@@ -304,10 +307,10 @@ end
 |10	Using Layouts|22.9.23|
 |11	Route Parameters|22.9.23|
 |12	Before Filters|22.9.23|
-|13	View Helpers|
-|14	Redirecting|
-|15	Adding a Search Form|
-|16	Improving Search|
+|13	View Helpers|23.9.23|
+|14	Redirecting|23.9.23|
+|15	Adding a Search Form|23.9.23|
+|16	Improving Search|24.9.23|
 |17	Code Challenge: Users and Interests|
 |18	Server-side vs. Client-side Code|
 |19	Optional: A Quick Analysis of How Sinatra Works|
