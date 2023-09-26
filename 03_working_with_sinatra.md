@@ -356,7 +356,7 @@ This is a common point of confusion, as these files contain both client-side cod
 |15	Adding a Search Form|23.9.23|
 |16	Improving Search|24.9.23|
 |17	Code Challenge: Users and Interests|26.9.23|
-|18	Server-side vs. Client-side Code|
-|19	Optional: A Quick Analysis of How Sinatra Works|
-|20	Summary|
-|21	Quiz|
+|18	Server-side vs. Client-side Code|26.9.23|
+|19	Optional: A Quick Analysis of How Sinatra Works|26.9.23|
+|20	Summary|26.9.23|
+|21	Quiz|26.9.23|
