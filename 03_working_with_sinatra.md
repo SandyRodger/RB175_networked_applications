@@ -288,10 +288,41 @@ end
 
 - 
 
-## Server-side vs. Client-side Code
-## Optional: A Quick Analysis of How Sinatra Works
-## Summary
-## Quiz
+## [Server-side vs. Client-side Code](https://launchschool.com/lessons/c3578b91/assignments/8b735100)
+
+| File-type | Server-side or client-side? | Correct? | Explanation|
+| :--- | :---: | :---: | :---: |
+|Gemfile| I think client side,. because you have to install gems.|no| **Server-side** This file is used by Bundler, the Ruby dependency management system, to install libraries needed to run the program.|
+|Ruby file (`.rb`)|Client side |no|**Server-side** These files are the core of a Sinatra application. The code within them runs on the server while handling incoming requests.
+|Stylesheet (`.css`)|I'm guessing Server side. but i couldn't say why. |no|**Client-side.** The code within these files is interpreted by the web browser (a client) as instructions for how to display a web page.
+|Javascript (`.jss`| server-side |no|**lient-side. The code within these files is evaluated by the JavaScript interpreter within a web browser (a client) to add behavior to a web page**
+|View Templates (`.erb`)| server-side|yes | **Server-side**. The Ruby code within these files is evaluated on the server to generate a response that will then be sent to the client.
+
+But what about the HTML tags within a view template? Aren't those client-side code?
+
+This is a common point of confusion, as these files contain both client-side code (HTML tags) and server-side code (Ruby). However, since they must be processed by a program on the server before being sent to the client, the ERB templates we've used in this course are considered to be server-side code.
+
+## [Optional: A Quick Analysis of How Sinatra Works](https://launchschool.com/lessons/c3578b91/assignments/debd1439)
+
+- skip for now
+
+## [Summary](https://launchschool.com/lessons/c3578b91/assignments/d46251f7)
+
+- 
+
+## [Quiz](https://launchschool.com/lessons/c3578b91/assignments/0a01eeeb)
+
+| Question | My answer | correct? | Correction |
+| :--- | :---: | :---: | :---: |
+|1.|
+|2.|
+|3.|
+|4.|
+|5.|
+|6.|
+|7.|
+|total|
+
 
 |  | Once | Twice | Thrice | Comprehension | Retention
 | :--- | :---: | :---: | :---: | :--- | :---
@@ -311,7 +342,7 @@ end
 |14	Redirecting|23.9.23|
 |15	Adding a Search Form|23.9.23|
 |16	Improving Search|24.9.23|
-|17	Code Challenge: Users and Interests|
+|17	Code Challenge: Users and Interests|26.9.23|
 |18	Server-side vs. Client-side Code|
 |19	Optional: A Quick Analysis of How Sinatra Works|
 |20	Summary|
