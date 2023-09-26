@@ -314,14 +314,27 @@ This is a common point of confusion, as these files contain both client-side cod
 
 | Question | My answer | correct? | Correction |
 | :--- | :---: | :---: | :---: |
-|1.|
-|2.|
-|3.|
-|4.|
-|5.|
-|6.|
-|7.|
-|total|
+|1.| A, C, D | yes | 
+|2.|C | yes | 
+|3.|C |  also B |  any name that ends with .ru is acceptable. | 
+|4.|A,C, D| not C | The second element contains the response headers, not the request headers.|
+|5.| B, C | also A | Routes are Ruby methods provided by Sinatra that typically use HTTP method names such as get, put, and delete.|
+|6.|C, D | not C, but B| get, put, delete, and options all correspond to HTTP methods and are methods in Sinatra. You can use them all, as well as post, patch, link, and unlink, to define routes.|
+|7.|C| also D|  The specified path matches both patterns. In D, :type matches any single word in that position.
+|8.|B| also A|A. 3456 matches the :product_id parameter, while meats matches the :category parameter. Sinatra doesn't include query strings when checking for a matching route. B. xyzzy matches the :product_id parameter (note that Sinatra doesn't care whether the ID is numeric).|
+|9.| A|yes|
+|10.|B| D| the 2nd entry doesn't ahve an `=` sign.|
+|11.|B,D|yes|
+|12.|A, D| yes|
+|13.|A, B| A, D|
+|14.|C, D| A,C,D|params can take strings as arguments.|
+|15.|D|yes|
+|16.|C|D|You typically call redirect from the route's code, not the template file.|
+|17.|A|D| Sinatra invokes the not_found route to process paths for which there is no route.|
+|18.|A, B, C| B, C| `redirect` must take an argument to know where to redirect to.|
+|19.|C, D| A, D|Redirection requires both a `Location` header and a status code. Sinatra doesn't load the redirected page itself; the browser must request it|
+|20.|C| yes|
+|total|7/20 (35%)
 
 
 |  | Once | Twice | Thrice | Comprehension | Retention
