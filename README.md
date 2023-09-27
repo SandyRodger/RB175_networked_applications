@@ -76,7 +76,13 @@
 - [Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#summary)
 - [Quiz](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#quiz)
 
-## 4. Deploying Sinatra Applications
+## 4. [Deploying Sinatra Applications](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md)
+
+- [Introduction](https://launchschool.com/lessons/26c18317/assignments/cf6f9a67)
+- [Configuring an Application for Deployment](https://launchschool.com/lessons/26c18317/assignments/ab12b730)
+- Creating a Heroku Application
+- Summary
+
 ## 5. Project: tools
 ## 6. Securing Applications
 ## 7. Adding JavaScript
@@ -89,7 +95,7 @@
 | :--- | :---: | :---: | :---: | :--- | :---
 |1. Introduction and Prerequisites|	14.6.23 |
 |2	Handling Requests Manually|17.6.23 |
-|3	Working with Sinatra|
+|3	Working with Sinatra|26.9.23|
 |4	Deploying Sinatra Applications|
 |5	Project: Todos|
 |6	Securing Applications|
