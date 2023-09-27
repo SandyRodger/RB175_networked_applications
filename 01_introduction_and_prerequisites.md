@@ -1,11 +1,11 @@
 # [Introduction and Prerequisites](https://launchschool.com/lessons/15115b5d/assignments)
-
 ## [About this course](https://launchschool.com/lessons/15115b5d/assignments/f2a825e3)
 
 - Working with the HTTP request/response cycle, building a program in Ruby.
-- Working with Sinatra. 
+
+- Working with Sinatra.
 - Deploying an app to the web.
-- Security considerations. 
+- Security considerations.
 - Using a structured software development work-flow.
 
 ### Backend assessment
@@ -14,22 +14,22 @@
 
 ### What to focus on
 
-- HTTP
-- What's going on under the hood in Sinatra.
-- The HTTP request/response cycle and URL parsing.
-- Stay high-level. So don't focus on Sinatra specifically, but rather consider what a web development framework does.
-  - What is a route?
-  - What is a template?
-- Get comfortable with the development process. At the end of the course we build up a web-app using this process. We will also add tests.
+HTTP
+What's going on under the hood in Sinatra.
+The HTTP request/response cycle and URL parsing.
+Stay high-level. So don't focus on Sinatra specifically, but rather consider what a web development framework does.
+What is a route?
+What is a template?
+Get comfortable with the development process. At the end of the course we build up a web-app using this process. We will also add tests.
 
 ### Code reviews
 
-- Not possible.
+Not possible.
 
 ## [Setting up your environment](https://launchschool.com/lessons/15115b5d/assignments/638e0d62)
 
-- `ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin22]`
-- `Bundler version 2.4.8`
+- ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin22]
+- Bundler version 2.4.8
 - Git
 - Heroku
 
@@ -40,11 +40,10 @@
 ## [Assignment: HTML and CSS](https://launchschool.com/lessons/15115b5d/assignments/85fb996f)
 
 - ERB. A templating language that combines ruby and html.
-- [Codecademy course on html](https://github.com/SandyRodger/RB175_networked_applications/blob/main/learn_html_codecademy.md)
-- [CSS course](http://learn.shayhowe.com/html-css/) - Completed
-- Do [LS202](https://launchschool.com/courses/21b45c96) now to have a grounding in html and css. This is optional. I am abandoning it because it is too boring.
+- Codecademy course on html
+- CSS course - Completed
+- Do LS202 now to have a grounding in html and css. This is optional. I am abandoning it because it is too boring.
 
-## [Quiz](https://launchschool.com/quizzes/8b016690)
+## [Quiz](https://launchschool.com/lessons/15115b5d/assignments/37ea4935)
 
-- 14.6.23 - 100% (2 questions)
-
+14.6.23 - 100% (2 questions)
