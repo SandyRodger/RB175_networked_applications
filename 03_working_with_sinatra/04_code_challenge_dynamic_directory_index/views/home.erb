@@ -25,7 +25,7 @@
                   <% @contents.each do |file| %>
                     <% next if file == "." || file == ".." %>
                     <li class="pure-menu-item">
-                      <a href=<%= file %> class="pure-menu-link"><%= file %></a>
+                      <a href=<%= "/file" %> class="pure-menu-link"><%= file %></a>
                     </li>
                   <% end %>
                 </ul>
@@ -65,6 +65,10 @@
         </div>
       </div>
   </div>
+
+  # <div class="content">
+  #   <%= yield %>
+  # </div>
 
   <script type="text/javascript" src="/javascripts/ui.js"></script>
 </body>
