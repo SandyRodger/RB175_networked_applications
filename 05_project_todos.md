@@ -182,7 +182,45 @@ end
 - URL design and conventions aren't dealt with so much here, but in larger applications it becomes important.
 
 ## [Clearing Cookies](https://launchschool.com/lessons/9230c94c/assignments/ada10aa2)
+
+- Dev tools
+  - resources
+    - Cookies, delete
+- Create 2 todo-lists
+
+- Download Chrome Extention 'Edit-this-Cookie`.
+- Cut cookie data.
+- reload the page, make more lists.
+- replace cookie value and see previous lists.
+- This is "session-hijacking", a serious security issue, solved by using https.
+
 ## [Flash Messages](https://launchschool.com/lessons/9230c94c/assignments/cfb2f0cb)
+
+- Messages that appear to the user when they've completed certain actions:
+  - Todo added successfully
+  - Invalid todo list name.
+- The challenge here is this functionality has to be available in `post "/lists" and also "get "/lists" when redirected. We'll solve this by using the session.
+- [1:17]
+
+```
+post ".lists" do
+  session[:lists] << {name: params[:list_name], todos: []}
+  session[:success] = "The list has been created." # we add the value here, which we need to access in another request. We do this by adding the value to the list hash
+  redirect "/lists"
+end
+```
+
+- The value has been added, but is not beign displayed, so we change the lists.erb template.
+- We need to first check to see if the list has indeed been successfully added.
+
+```erb
+<% if session[:success] %>
+  <div class="flash success">
+    <p><%= session[:success] %></p>
+  </div>
+<% end %>
+```
+
 ## [Validations](https://launchschool.com/lessons/9230c94c/assignments/7923bc3a)
 ## [Refactoring Validations](https://launchschool.com/lessons/9230c94c/assignments/b47401cd)
 ## [When to Use Validations](https://launchschool.com/lessons/9230c94c/assignments/2f7ac616)
