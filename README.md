@@ -86,7 +86,13 @@
 ## [5. Project: Todos](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md)
 
 - [Introduction](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#introduction)
+  - [topics](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#topics)
 - [Project Template](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#project-template)
+  - [config.ru](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#configru)
+  - [Gemfile and Gemfile.lock](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#gemfile-and-gemfilelock)
+  - [todo.rb](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#todorb)
+  - [Views directory](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#views-directory)
+  - [Public directory](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#public-directory)
 - [Project Demo](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#project-demo)
 - [What is State?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#what-is-state)
 - [Viewing All Todo Lists](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#viewing-all-todo-lists)
