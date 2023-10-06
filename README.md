@@ -110,7 +110,10 @@
 - [Clearing Cookies](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#clearing-cookies)
 - [Flash Messages](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#flash-messages)
 - [Validations](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#validations)
+  - [session musings](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#session-musings)
+  - [strip method](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#strip-method)
 - [Refactoring Validations](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#refactoring-validations)
+
 - [When to Use Validations](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#when-to-use-validations)
 - [Sidebar: Rubocop Warning](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#sidebar-rubocop-warning)
 - [Displaying a Single Todo List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#displaying-a-single-todo-list)
