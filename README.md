@@ -118,6 +118,7 @@
 - [Sidebar: Rubocop Warning](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#sidebar-rubocop-warning)
 - [Displaying a Single Todo List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#displaying-a-single-todo-list)
 - [Capturing Template Content For Display Elsewhere](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#capturing-template-content-for-display-elsewhere)
+  - [sinatra::ContentFor](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#sinatracontentfor)
 - [Editing Todo Lists](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#editing-todo-lists)
 - [Delete Todo Lists](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#delete-todo-lists)
 - [Adding Todos to a List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#adding-todos-to-a-list)
