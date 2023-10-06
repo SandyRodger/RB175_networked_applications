@@ -111,7 +111,69 @@ get "/" do
 - [8:00] Redirect homepage to lists.
 
 ## [Creating a New Todo List](https://launchschool.com/lessons/9230c94c/assignments/2f3d171a)
+
+### User sessions
+
+#### configure block
+
+- Step 1: Add a configure block, which sets up Sinatra to use sessions:
+
+```
+configure do
+  enable :sessions
+  set :session_secret, 'secret'   # we provide a value here so that Sinatra doesn't create its own every time you restart Sinatra, invalidating the users session because the value is used to determine if its the same user.
+end
+```
+
+- Step 2: assign the session data to `@lists`, with a before block.
+
+```
+@lists = session[:lists]
+```
+
+### Before block
+
+- So no error will be raised when the program tries to access `session[:lists]`, but there's no value assigned to it.
+
+```
+before do
+  session[:lists] ||= []
+end
+```
+
+#### get "lists/new"
+
+- [4:00] Create a path for "/lists/new":
+
+```
+get "/lists/new" do
+  session[:lists] << { name: "New List", todos: [] }
+  redirect "/lists"
+end
+```
+
+- So when a user visits this path it adds a new value and redirects to the `/lists` page. We'll add a form here later.
+- [5:20] Add a link to the lists page.
+#### Add form
+  - [6:00] Add a form.
+#### new_list.erb
+  - [6:30] `new_list` erb template.
+#### post method
+
+- [8:10] stylesheet not rendering properly. They are referenced relatively and so are expected to be in the same directory as the view file.
+- [10:10] Add route for post "/lists".
+
+```
+post "lists" do
+  session[:lists] << {name: params[:list_name], todos: []}
+  redirect "/lists"
+end
+```
+
 ## [URL Discussion](https://launchschool.com/lessons/9230c94c/assignments/258247e2)
+
+- 
+
 ## [Clearing Cookies](https://launchschool.com/lessons/9230c94c/assignments/ada10aa2)
 ## [Flash Messages](https://launchschool.com/lessons/9230c94c/assignments/cfb2f0cb)
 ## [Validations](https://launchschool.com/lessons/9230c94c/assignments/7923bc3a)
