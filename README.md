@@ -145,7 +145,7 @@
 |2	Handling Requests Manually|17.6.23 |
 |3	Working with Sinatra|26.9.23|
 |4	Deploying Sinatra Applications|4.10.23|
-|5	Project: Todos|
+|5	Project: Todos|5.10.23|
 |6	Securing Applications|
 |7	Adding JavaScript|
 |8	Project: File-based CMS|
