@@ -105,6 +105,8 @@
   - [New list](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#new_listerb)
   - [Post method](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#post-method)
 - [URL Discussion](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#url-discussion)
+  - [Adding comments](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#adding-comments)
+  - [Choosing URLs](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#choosing-urls)
 - [Clearing Cookies](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#clearing-cookies)
 - [Flash Messages](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#flash-messages)
 - [Validations](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#validations)
