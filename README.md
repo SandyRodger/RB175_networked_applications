@@ -113,10 +113,10 @@
 - [Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#summary)
 - [Quiz](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#quiz)
 
-## 6. Securing Applications
-## 7. Adding JavaScript
-## 8. Project: File-based CMS
-## 9. Optional Projects
+## [6. Securing Applications](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md)
+## [7. Adding JavaScript](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md)
+## [8. Project: File-based CMS](https://github.com/SandyRodger/RB175_networked_applications/blob/main/08_project_file_based_CMS.md)
+## [9. Optional Projects](https://github.com/SandyRodger/RB175_networked_applications/blob/main/09_optional_projects.md)
 
 ## Overview
 
