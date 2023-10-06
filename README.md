@@ -123,6 +123,7 @@
 - [Delete Todo Lists](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#delete-todo-lists)
 - [Adding Todos to a List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#adding-todos-to-a-list)
 - [Delete a Todo from a List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#delete-a-todo-from-a-list)
+  - [choosing between get and post](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#choosing-between-get-and-post)
 - [Sidebar: Fixing Header Link Styles](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#sidebar-fixing-header-link-styles)
 - [Marking Todos as Completed](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#marking-todos-as-completed)
 - [Completing All Todos on a List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#completing-all-todos-on-a-list)
