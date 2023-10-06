@@ -260,6 +260,9 @@ end
 
 - Add 'The list name must be unique' error message.
 - logic doesn't work at first because the if clause looks at cases in the wrong order.
+- Write `error_for_list` helper method
+- Potential problem: the method only checks for 1 problem, can't see mutiple failings.
+- Final result:
 
 ```ruby
 post '/lists' do
@@ -277,9 +280,79 @@ end
 ```
 
 ## [When to Use Validations](https://launchschool.com/lessons/9230c94c/assignments/2f7ac616)
+
+- (No video)
+- Input validation can get super complex. It's been simplified for this project.
+- Don't try and control every variation a user can input. You can expect bad data. All you need to do is handle the error and provide a way for the user to recover, by displaying the form again with an appropriate message.
+- But don't check for things that can only happen when there's a bug in the code. If there's a bug, fix it.
+- Don't write error messages only a dev can understand. These can be helpful to hackers trying to understand the back-end of your program.
+
 ## [Sidebar: Rubocop Warning](https://launchschool.com/lessons/9230c94c/assignments/9a9b017a)
+
+```ruby
+error = error_for_list_name(list_name)
+if error
+```
+
+rather than
+
+```ruby
+ if error = error_for_list_name(list_name)
+```
+
+- because it's not clear whether the dev meant `==` or `=`. in the first piece of code it's more explicit and easier to understand.
+  
 ## [Displaying a Single Todo List](https://launchschool.com/lessons/9230c94c/assignments/9a803450)
+
+- a 1:30 video about what to build
+- Solution video:
+  - Create a new route for "/lists/:id"
+
+```ruby
+get "/lists/:id" do
+  @list = session[:lists][params[:id]]
+  erb :list, :layout: :layout
+end
+```
+  - Use each with index to map items in the list.
+  - Create `list.erb`
+  - all parameters passed in Sinatra are strings, so the `:id` value has to be converted to an integer.
+
 ## [Capturing Template Content For Display Elsewhere](https://launchschool.com/lessons/9230c94c/assignments/e4826299)
+
+- 'All lists' needs to be up at the top right, for all pages.
+
+#### Sinatra::Contentfor
+
+- [2:00]
+- You can define something in your template and then print it out somewhere else.
+- [Documentation here](https://sinatrarb.com/contrib/content_for)
+
+```index.erb
+<% content_for :some_key do %>
+  <chunk of "html">...</chunk>
+<% end %>
+```
+
+```laypout.erb
+<%= yield_conent :some_key %>
+```
+
+- must be required: `require sinatra/content_for`
+- Then:
+
+```list.erb
+<%content_for :header_links do %>
+  <a href="/lists">All Lists</a>
+<% end %>
+```
+
+```layout.erb
+<%= yield_content :header_links %>
+```
+
+- Do the same with 'new list' link.
+
 ## [Editing Todo Lists](https://launchschool.com/lessons/9230c94c/assignments/dc70aa1d)
 ## [Delete Todo Lists](https://launchschool.com/lessons/9230c94c/assignments/ace30260)
 ## [Adding Todos to a List](https://launchschool.com/lessons/9230c94c/assignments/046ee3e0)
