@@ -62,8 +62,54 @@ gem "sinatra-contrib"
   - application.css  is the main stylesheet for this project. We'll reference this to be sure to use the right markup to pick up these styles.
 
 ## [Project Demo](https://launchschool.com/lessons/9230c94c/assignments/4687f134)
+
+- Explanation of the app as it will be at the end.
+  -  A page with multiple ToDo lists that each have mutiltiple items in them.
+  -  You can add items.
+  -  You can delete items.
+  -  You can edit lists, change their names.
+  -  There are success/failure flash messages.
+    -  "Happy-path behaviours"
+  -  Redirects
+  -  error messages
+
 ## [What is State?](https://launchschool.com/lessons/9230c94c/assignments/5d2f75a0)
+
+- (No video)
+- "Data that persists over time"
+- HTTP is a protocol for the interactions between client and server.
+- "HTTP is state-less" means every HTTP request is handled seperately. So when a server finishes handling one request, it totally forgets about it and starts on the next. Like a cashier who has no idea who came before the person in front of them (good image?).
+- The reality is that servers DO rememeber things between requests. But, doing so requires techniques "built on top of HTTP", and not actually part of HTTP.
+- HTTP has no concept of state. We just use it to send information back and forth. When interpreted correctly by both side this creates a system where we can persist across requests. (like threads of a tapestry only making sense as parts of a whole?).
+
 ## [Viewing All Todo Lists](https://launchschool.com/lessons/9230c94c/assignments/7bdd9818)
+
+- What are these lists and where are they going to be stored?
+  - Some programs might use a "relational data-base.
+  - Here we are going to use a 'session-object' provided by Sinatra.
+    - This means people don't have to log in to the site ot use it.
+    - The con-side is that if they clear their cookies they lose all their data. So in a production application (?) you would want to store the info somewhere where it wouldn't be lost (unless that was it's purpose).
+- [1:15] We want to define a data-structure that will properly represent the data that the user will create in the eventual session with todo lists containing todo items.
+  - Then we can come back and create a way to modify these structures in the user's session.
+  - We will use a hash with 2 values associated with it:
+    - name
+    - list of todos
+  - The list of all lists will be an array of hashes.
+ 
+```ruby
+get "/" do
+  @lists = [
+    {name: "Lunch Groceries"},
+    {name: "Dinner Groceries"}
+  ]
+  erb :lists, layout: :layout
+```
+
+- [3:00] Create `lists.erb`
+- [4:10] Create count of todo items in each list. Store this in another key in the hash.
+- Style point tapping into `<a>` tags, `<p>` tags and `<h2>` tags.
+- [8:00] Redirect homepage to lists.
+
 ## [Creating a New Todo List](https://launchschool.com/lessons/9230c94c/assignments/2f3d171a)
 ## [URL Discussion](https://launchschool.com/lessons/9230c94c/assignments/258247e2)
 ## [Clearing Cookies](https://launchschool.com/lessons/9230c94c/assignments/ada10aa2)
