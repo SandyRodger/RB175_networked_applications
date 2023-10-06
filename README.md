@@ -83,7 +83,7 @@
 - [Creating a Heroku Application](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md#creating-a-heroku-application)
 - [Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md#summary)
 
-## [5. Project: Todos](https://launchschool.com/lessons/9230c94c/assignments)
+## [5. Project: Todos](https://github.com/SandyRodger/RB175_networked_applications/tree/main#:~:text=42%20minutes%20ago-,05_project_todos.md,-Update%2005_project_todos.md)
 
 - [Introduction](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#introduction)
 - [Project Template](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#project-template)
