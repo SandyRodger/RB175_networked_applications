@@ -202,7 +202,7 @@ end
 - The challenge here is this functionality has to be available in `post "/lists" and also "get "/lists" when redirected. We'll solve this by using the session.
 - [1:17]
 
-```
+```ruby
 post ".lists" do
   session[:lists] << {name: params[:list_name], todos: []}
   session[:success] = "The list has been created." # we add the value here, which we need to access in another request. We do this by adding the value to the list hash
@@ -221,8 +221,45 @@ end
 <% end %>
 ```
 
+- Problem: the message stays for the whole session, rather than disappearing when the page reloads.
+  - We deal with this by deleting the `session[:success]` entry even as we print it out:
+  - `session.delete(:success)`
+
 ## [Validations](https://launchschool.com/lessons/9230c94c/assignments/7923bc3a)
+
+- NB: There is a general pattern in route organisation:
+  - When a valid action takes place => redirect
+  - When there is an error => render a page.
+- This is due to HTTP's stateless nature. If there is an arror we want to be able to go back and fix it, so we want to have access to our parameters and any IVs in the current route. Redirecting to a new list page loses our access to data tied to the current request.
+
+```ruby
+post "/lists" do
+  list_name = params[:list_name].strip
+  if list_name.size >= 1 && list_name.size <= 100
+    session[:lists] << {name: list_name, todos: []}
+    session[:success] = "The list has been created."
+    redirect "/lists"
+  else
+    session[:error] = "List name must be between 1 and 100 characters."
+    erb :new_list, layout: :layout
+  end
+end
+```
+
+#### session musings
+
+- I THINK I NEED TO UNDERSTAND SESSIONS BETTER. What is `session[:success]` accessing? A key in the `@list` hash. (?) Or is session its own hash? with :success as the key and "The list has been created." as the value? Its one of those 2 I think. And then this session hash remains in existence for the whole session? In the cookie?   
+
+#### strip method
+
+- [06:00]
+- [07:50] refactor
+- Move flash messages from `new_list.erb` to main `layout.erb` so it can be used for other messages.
+
 ## [Refactoring Validations](https://launchschool.com/lessons/9230c94c/assignments/b47401cd)
+
+- 
+
 ## [When to Use Validations](https://launchschool.com/lessons/9230c94c/assignments/2f7ac616)
 ## [Sidebar: Rubocop Warning](https://launchschool.com/lessons/9230c94c/assignments/9a9b017a)
 ## [Displaying a Single Todo List](https://launchschool.com/lessons/9230c94c/assignments/9a803450)
