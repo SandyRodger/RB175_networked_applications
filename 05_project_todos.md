@@ -172,7 +172,14 @@ end
 
 ## [URL Discussion](https://launchschool.com/lessons/9230c94c/assignments/258247e2)
 
-- 
+#### Adding comments
+
+- "In Sinatra sometimes it can be hard to remember what each handler(?) does, because in the block of code it's not obvious"
+
+#### Choosing URLs
+
+- Write out the routes we want to build, just as a conceptual exercise.
+- URL design and conventions aren't dealt with so much here, but in larger applications it becomes important.
 
 ## [Clearing Cookies](https://launchschool.com/lessons/9230c94c/assignments/ada10aa2)
 ## [Flash Messages](https://launchschool.com/lessons/9230c94c/assignments/cfb2f0cb)
