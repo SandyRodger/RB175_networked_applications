@@ -80,10 +80,39 @@
 
 - [Introduction](https://launchschool.com/lessons/26c18317/assignments/cf6f9a67)
 - [Configuring an Application for Deployment](https://launchschool.com/lessons/26c18317/assignments/ab12b730)
-- Creating a Heroku Application
-- Summary
+- [Creating a Heroku Application](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md#creating-a-heroku-application)
+- [Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md#summary)
 
-## 5. Project: tools
+## 5. Project: Todos
+
+- [Introduction](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#introduction)
+- [Project Template](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#project-template)
+- [Project Demo](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#project-demo)
+- [What is State?](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#what-is-state)
+- [Viewing All Todo Lists](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#viewing-all-todo-lists)
+- [Creating a New Todo List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#creating-a-new-todo-list)
+- [URL Discussion](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#url-discussion)
+- [Clearing Cookies](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#clearing-cookies)
+- [Flash Messages](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#flash-messages)
+- [Validations](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#validations)
+- [Refactoring Validations](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#refactoring-validations)
+- [When to Use Validations](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#when-to-use-validations)
+- [Sidebar: Rubocop Warning](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#sidebar-rubocop-warning)
+- [Displaying a Single Todo List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#displaying-a-single-todo-list)
+- [Capturing Template Content For Display Elsewhere](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#capturing-template-content-for-display-elsewhere)
+- [Editing Todo Lists](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#editing-todo-lists)
+- [Delete Todo Lists](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#delete-todo-lists)
+- [Adding Todos to a List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#adding-todos-to-a-list)
+- [Delete a Todo from a List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#delete-a-todo-from-a-list)
+- [Sidebar: Fixing Header Link Styles](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#sidebar-fixing-header-link-styles)
+- [Marking Todos as Completed](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#marking-todos-as-completed)
+- [Completing All Todos on a List](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#completing-all-todos-on-a-list)
+- [Using View Helpers to Apply Styles](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#using-view-helpers-to-apply-styles)
+- [Sorting and Filtering with View Helpers](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#sorting-and-filtering-with-view-helpers)
+- [Deploying to Heroku](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#deploying-to-heroku)
+- [Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#summary)
+- [Quiz](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#quiz)
+
 ## 6. Securing Applications
 ## 7. Adding JavaScript
 ## 8. Project: File-based CMS
@@ -96,7 +125,7 @@
 |1. Introduction and Prerequisites|	14.6.23 |
 |2	Handling Requests Manually|17.6.23 |
 |3	Working with Sinatra|26.9.23|
-|4	Deploying Sinatra Applications|
+|4	Deploying Sinatra Applications|4.10.23|
 |5	Project: Todos|
 |6	Securing Applications|
 |7	Adding JavaScript|
