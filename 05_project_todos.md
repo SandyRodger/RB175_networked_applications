@@ -354,7 +354,38 @@ end
 - Do the same with 'new list' link.
 
 ## [Editing Todo Lists](https://launchschool.com/lessons/9230c94c/assignments/dc70aa1d)
+
+- Adding a link to edit lists. This link will take them to a form where they can change the name of the list
+- Solution video:
+  - Edit list form will be very similar to the new_list form.
+  - The current title of the list will be loaded so the user knows what they are changing.
+  - Neat bit of coding (I'm not 100% concentrating...)
+  - Loading the invalid list name along with the flash message so the user can compare their input with the message.
+
 ## [Delete Todo Lists](https://launchschool.com/lessons/9230c94c/assignments/ace30260)
+
+- Adding the 'delete list' button
+- Solution video:
+  - copy the "markup" for list title to the list.erb template.
+
+```erb
+
+```
+
+#### choosing between GET and POST
+
+- [1:40] Are you fetching data from the server? Or just sending data back to the server? Is the operation "safe" to do more than once?
+- A GET request for instance. If the browser does this multiple times data won't be destroyed, nothing will go wrong. It's safe.
+-  Browsers do this all the time, particularly to give the illusion of fast loading times the browser will load content before a user clicks on it.
+-  Editing a list is not safe because it destroys the user's data. So it should never be done with e GET request.
+-  We'll use a POST. The challenge with that is it can't you can't use a link in plain HTML to make a POST request.
+-  So we will make the 'delete list' button a form and then ...WHAT? 
+
+```edit_list.erb
+      <form action="/lists/<%= params[:id]%>/destroy" method="post">
+        <button type="submit" class="delete">Delete List</button>
+      </form>
+```
 ## [Adding Todos to a List](https://launchschool.com/lessons/9230c94c/assignments/046ee3e0)
 ## [Delete a Todo from a List](https://launchschool.com/lessons/9230c94c/assignments/8c3ed504)
 ## [Sidebar: Fixing Header Link Styles](https://launchschool.com/lessons/9230c94c/assignments/781d35c6)
