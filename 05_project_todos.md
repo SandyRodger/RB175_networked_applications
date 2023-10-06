@@ -1,6 +1,15 @@
 # [Project Todos](https://launchschool.com/lessons/9230c94c)
 
 ## [Introduction](https://launchschool.com/lessons/9230c94c/assignments/c891bf4b)
+
+- web-based
+- personal task-manager
+- using Sinatra
+### Topics:
+  - Storing data in the session
+  - HTTP methods other than GET
+  - Javascript in Sinatra
+
 ## [Project Template](https://launchschool.com/lessons/9230c94c/assignments/8356b1b0)
 ## [Project Demo](https://launchschool.com/lessons/9230c94c/assignments/4687f134)
 ## [What is State?](https://launchschool.com/lessons/9230c94c/assignments/5d2f75a0)
