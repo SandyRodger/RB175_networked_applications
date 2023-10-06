@@ -258,7 +258,23 @@ end
 
 ## [Refactoring Validations](https://launchschool.com/lessons/9230c94c/assignments/b47401cd)
 
-- 
+- Add 'The list name must be unique' error message.
+- logic doesn't work at first because the if clause looks at cases in the wrong order.
+
+```ruby
+post '/lists' do
+  list_name = params[:list_name].strip
+  error = error_for_list_name(list_name)
+  if error
+    session[:error] = error
+    erb :new_list, layout: :layout
+  else
+    session[:lists] << {name: list_name, todos: []}
+    session[:success] = "The list has been created."
+    redirect "/lists"
+  end
+end
+```
 
 ## [When to Use Validations](https://launchschool.com/lessons/9230c94c/assignments/2f7ac616)
 ## [Sidebar: Rubocop Warning](https://launchschool.com/lessons/9230c94c/assignments/9a9b017a)
