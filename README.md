@@ -76,14 +76,14 @@
 - [Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#summary)
 - [Quiz](https://github.com/SandyRodger/RB175_networked_applications/blob/main/03_working_with_sinatra.md#quiz)
 
-## 4. [Deploying Sinatra Applications](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md)
+## [4. Deploying Sinatra Applications](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md)
 
 - [Introduction](https://launchschool.com/lessons/26c18317/assignments/cf6f9a67)
 - [Configuring an Application for Deployment](https://launchschool.com/lessons/26c18317/assignments/ab12b730)
 - [Creating a Heroku Application](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md#creating-a-heroku-application)
 - [Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md#summary)
 
-## 5. Project: Todos
+## [5. Project: Todos](https://launchschool.com/lessons/9230c94c/assignments)
 
 - [Introduction](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#introduction)
 - [Project Template](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#project-template)
