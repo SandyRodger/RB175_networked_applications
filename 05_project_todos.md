@@ -11,6 +11,56 @@
   - Javascript in Sinatra
 
 ## [Project Template](https://launchschool.com/lessons/9230c94c/assignments/8356b1b0)
+
+### Config.ru
+
+- This file describes which code needs to be run when the app is started.
+
+```
+require './todo'
+run Sinatra::Application
+```
+
+### Gemfile and Gemfile.lock
+
+```
+source "https://rubygems.org"
+
+gem "sinatra, "~>1.4.6"
+gem "sinatra-contrib"
+```
+
+- `sinatra-contrib` contains the reloader module so you don't have to kill the program and reload it every time you make a change.
+
+### todo.rb
+
+- the main file for this project, where we define:
+  -  all of our routes
+  -  most of the functionality for this app.
+-  require:
+  -  sinatra.
+  -  sinatra/reloader.
+  -  tilt/erubis: allows us to render an erb template.
+-  type `ruby todo.rb` to start this app. Then go to `localhost:4567` to see the program.
+
+### Views directory
+
+- (2.15 mins into video)
+- layout.erb
+  - the main template file for this project.
+  - require css files
+  - require a font from googlefont
+  - header
+  - yield out the content is rendered by each route into a `main` container.
+ 
+### Public directory
+
+- (2.47 mins into video)
+- Images
+- Stylesheets
+  - whitespace-reset.css for default padding and spacing to be consistent across different rendereing engines.
+  - application.css  is the main stylesheet for this project. We'll reference this to be sure to use the right markup to pick up these styles.
+
 ## [Project Demo](https://launchschool.com/lessons/9230c94c/assignments/4687f134)
 ## [What is State?](https://launchschool.com/lessons/9230c94c/assignments/5d2f75a0)
 ## [Viewing All Todo Lists](https://launchschool.com/lessons/9230c94c/assignments/7bdd9818)
