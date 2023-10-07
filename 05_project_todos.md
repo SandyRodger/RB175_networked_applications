@@ -514,9 +514,83 @@ end
 
 ## [Completing All Todos on a List](https://launchschool.com/lessons/9230c94c/assignments/87aa60f3)
 
--
+- Add a 'complete all' button. We add the button to the view template and then do the back-end coding in `todo.rb`
+
+```list.erb
+      <li>
+        <form action="/lists/<%= @list_id %>/complete_all" method="post">
+          <button class="check" type="submit">Complete All</button>
+        </form>
+      </li
+```
+
+- solution video [8:19]:
+  - [04:00] note on duplication. Ripe for refactoring in a later assignment.
+  - [05:00] index error.
+
+```todo.rb
+# Mark all todos as complete
+post "/lists/:id/complete_all" do
+  @list_id = params[:id].to_i
+  @list = session[:lists][@list_id]
+
+  @list[:todos].each do |todo|
+    todo[:completed] = true
+  end
+
+  session[:success] = "all todos have been completed"
+  redirect "/lists/#{@list_id}"
+end
+```
 
 ## [Using View Helpers to Apply Styles](https://launchschool.com/lessons/9230c94c/assignments/dd71166b)
+
+- Sort the lists on main lists-page by whether they are finished or not.
+- Display a fraction describing how much of the list has been completed.
+- Solution video [19:12]
+  - [02:00] define "completed".
+  - A new list has no un-complete tasks, but shouldn't be "complete".
+  - [04:00] write a helper method called "list_comlpete?(list)".
+
+```todo.rb
+helpers do
+  def list_complete?(list)
+    todos_count(list) > 0 && todos_remaining_count(list) == 0
+  end
+```
+
+#### helpers block
+  - [05:00]
+  - should be at the top of the main code file, with `configure` block and `before` block.
+  - [06:00] Methods defined in this block will be available to view templates and to routes defined in the main file.
+  - If there are methods that don't need to be available in the views, then they ought not go in the `helpers` block. To make the intention clear. Some methods are intended for common functionality of the routes and some are intended to be used in the view templates.
+  - [08:00] hide complete all button if all are already complete.
+  - [09:00] problems:
+    - `id="todos"` tags are duplicated in `list.erb`
+    - What is there's more than one list we want to change?
+    - What if we had an item that was partially completed?
+    - What if we wanted to make a brand new list which would be styled differently with a totally new class?.
+      - [10:00] To do that we would structure the code differently where the id tag would be the result of its own helper method.
+      - [11:00] `list_class(list)` helper method.
+      - With the `list_class` nethod if we need to make changes to a list's class we can do it all in one place to change the behaviour in all the App.
+  - [13:20] Change the 'total complete' figure to a fraction.
+
+```lists.erb
+      <a href="/lists/<%= index %>">
+        <h2><%= list[:name] %></h2> 
+        <p><%= todos_remaining_count(list) %> / <%= todos_count(list) %></p> 
+      </a>
+```
+
+```todo.rb
+  def todos_remaining_count(list)
+    list[:todos].select { |todo| !todo[:completed] }.size
+  end
+```
+
+  - [17:30] Refactor duplication.
+  - [18:50] "business logic" ?
+
 ## [Sorting and Filtering with View Helpers](https://launchschool.com/lessons/9230c94c/assignments/5046aba5)
 ## [Deploying to Heroku](https://launchschool.com/lessons/9230c94c/assignments/7d7b4dd7)
 ## [Summary](https://launchschool.com/lessons/9230c94c/assignments/0aa7a431)
