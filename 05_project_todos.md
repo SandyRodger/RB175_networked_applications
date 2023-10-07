@@ -545,7 +545,6 @@ end
 
 ## [Using View Helpers to Apply Styles](https://launchschool.com/lessons/9230c94c/assignments/dd71166b)
 
-- Sort the lists on main lists-page by whether they are finished or not.
 - Display a fraction describing how much of the list has been completed.
 - Solution video [19:12]
   - [02:00] define "completed".
@@ -592,6 +591,78 @@ helpers do
   - [18:50] "business logic" ?
 
 ## [Sorting and Filtering with View Helpers](https://launchschool.com/lessons/9230c94c/assignments/5046aba5)
+
+- Sort the lists on main lists-page and single-list pages, by whether they are finished or not.
+- [00:40] We could sort the lists as they are stored.
+  - `sort_by {|list| list[:complete]} , except there is no `:completed` value.
+  - So we'll use the `list_complete?` method.
+  - but that doesn't work becasue you can't sort by `true` and `false`. They are considered to be "unordered" by Ruby.
+  - [03:00] so we try a ternary operator returning either `1` of `0`.
+  - However this creates an indexing problem because we were identifying the todo lists by their index, but now there are 2 versions of that with different orders.
+  - This problem wouldn't happen with a database, because we usually store data with an identifier key. So we wouldn;t ahve to worry about it's position in storage.
+  - Options:
+    - 1. we could store each value with its own unique identifier, which would mean considering all the other stored objects any time a new object was entered.
+    - 2. Another option would be to alwasy keep the todo items in the proper order. That would involve a lot of inefficient reordering of the items.
+    - 3. [06:10] Use view helpers to show items as we want to without changing the code in the sinatra route.
+- Solution video [17:47]:
+  - [02:00] write `sort_lists(lists, &block)` method
+
+```todo.rb
+  def sort_lists(lists, &block)
+    complete_lists, incomplete_lists = lists.partition { |list| list_complete?(list)}
+
+    incomplete_lists.each { |list| yield list, lists.index(list) }
+    complete_lists.each { |list| yield list, lists.index(list) }
+  end
+```
+
+  - [06:00] Check it works.
+  - [07:30] Refactor for concision. A key can be any ruby object so...
+  - [09:10] Sort single-lists in the same way.
+    - define `sort_todos`
+    
+#### Vline
+
+      - change things in Vline (How does one do this?)
+   
+```todo.rb
+  def sort_todos(todos, &block)
+    complete_todos, incomplete_todos = todos.partition { |todo| todo[:completed]}
+  
+    incomplete_todos.each { |todo| yield todo, todos.index(todo) }
+    complete_todos.each { |todo| yield todo, todos.index(todo) }
+  end
+```
+
+#### Enumerable::partition
+
+ - [12:20] Refactoring
+
+```todo.rb
+complete_todos, incomplete_todos = todos.partition { |todo| todo[:completed]}
+```
+
+- Choose the one that reads better to the next dev coming in.
+- [17:00] A method with 2 blocks ???
+
 ## [Deploying to Heroku](https://launchschool.com/lessons/9230c94c/assignments/7d7b4dd7)
+
+- I hit a real road-block here, which probably cost me 2 hours.
+  - It is documented[here](https://launchschool.com/posts/689ace14)
+  - The issue was caused by my project repository being within the directory of my RB175 repository.
+- Steps (I won't describe them here):
+  1. Configure the application for production and test it locally.
+  2. Create a Heroku application and deploy the code. 
+
 ## [Summary](https://launchschool.com/lessons/9230c94c/assignments/0aa7a431)
+
+- State is data that persists over time.
+- The session is how we have data persist between HTTP requests. It's associated with a user by storing in their browser cookie.
+- Data often needs to be validated when submitted.
+- Flash messages which are soon deleted can be stored in the session.
+- `content_for` and `yield_content` are Sinatra methods for content entered via a view template.
+- `GET` requests should only request data. Any request for modifying data should be in a `POST` (or other non-`GET`) request.
+- Web browsers don't support request methods other than `GET` or `POST` in HTML forms so sometimes you have to make do with those options.
+- View-helpers allow a way to extract the code that determines what HTML markup is generated for view. 
+
 ## [Quiz]()
