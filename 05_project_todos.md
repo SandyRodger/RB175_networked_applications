@@ -182,6 +182,10 @@ end
 - Write out the routes we want to build, just as a conceptual exercise.
 - URL design and conventions aren't dealt with so much here, but in larger applications it becomes important.
 
+#### resource-based routes
+
+- [02:00] the name of the thing modified is in the URL.
+
 ## [Clearing Cookies](https://launchschool.com/lessons/9230c94c/assignments/ada10aa2)
 
 - Dev tools
