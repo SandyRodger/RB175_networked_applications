@@ -161,6 +161,7 @@ end
 #### post method
 #### relative urls for stylesheets
 - [8:10] stylesheet not rendering properly. They are referenced relatively and so are expected to be in the same directory as the view file.
+- Quiz question 4 seesm to contradict this... ?
 - [10:10] Add route for post "/lists".
 
 ```
