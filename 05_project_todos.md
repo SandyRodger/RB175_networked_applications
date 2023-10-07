@@ -379,18 +379,143 @@ end
 -  Browsers do this all the time, particularly to give the illusion of fast loading times the browser will load content before a user clicks on it.
 -  Editing a list is not safe because it destroys the user's data. So it should never be done with e GET request.
 -  We'll use a POST. The challenge with that is it can't you can't use a link in plain HTML to make a POST request.
--  So we will make the 'delete list' button a form and then ...WHAT? 
+-  So we will make the 'delete list' button a form  with just one button. It looks like a link, but it's actually a button in a form.
+-  The button submits the form linked in the button
 
 ```edit_list.erb
       <form action="/lists/<%= params[:id]%>/destroy" method="post">
         <button type="submit" class="delete">Delete List</button>
       </form>
 ```
+- Then you write the path in `todo.rb` to handle that deletion:
+- [07:30] We use `delete_at`.
+
+```todo.rb
+post "/lists/:list_id/todos/:id/destroy" do
+  @list_id = params[:list_id].to_i
+  @list = session[:lists][@list_id]
+
+  todo_id = params[:id].to_i
+  @list[:todos].delete_at(todo_id)
+  session[:success] = "The todo has been deleted."
+  redirect "/lists/#{@list_id}"
+end
+```
+
 ## [Adding Todos to a List](https://launchschool.com/lessons/9230c94c/assignments/046ee3e0)
+
+- Add 'todos' to the lists
+- Paste in the markup for a form to `list.erb`
+- solution video to write route
+  - `:list_id` is the name of the param because there will be different types of objects that need to be identified.
+
+```todo.rb
+# Add a new todo to a list
+post "/lists/:list_id/todos" do
+  @list_id = params[:list_id].to_i
+  @list = session[:lists][@list_id]
+  text = params[:todo].strip
+
+  error = error_for_todo(text)
+  if error
+    session[:error] = error
+    erb :list, layout: :layout
+  else
+    @list[:todos] << {name: text, completed: false}
+    session[:success] = "The list was added."
+    redirect "/lists/#{@list_id}"
+  end
+end
+```
+
+- Am i even awake right now?
+- This video is 18 minutes!!!!!!!!!!!
+
 ## [Delete a Todo from a List](https://launchschool.com/lessons/9230c94c/assignments/8c3ed504)
+
+- Functionality to delete single items from items in todo lists. THere will be a little rubbish-bin icon at the far right of each entry.
+- Solution video:
+  - [4:14 ] Duration
+
+```list.erb
+        <form action="/lists/<%= @list_id %>/complete_all" method="post">
+          <button class="check" type="submit">Complete All</button>
+        </form>
+```
+- Change `todo.rb` so the post from the `delete` button is handled properly.
+
+```todo.rb
+# Delete a todo from a list
+post "/lists/:list_id/todos/:id/destroy" do
+  @list_id = params[:list_id].to_i
+  @list = session[:lists][@list_id]
+
+  todo_id = params[:id].to_i
+  @list[:todos].delete_at(todo_id)
+  session[:success] = "The todo has been deleted."
+  redirect "/lists/#{@list_id}"
+end
+```
+
 ## [Sidebar: Fixing Header Link Styles](https://launchschool.com/lessons/9230c94c/assignments/781d35c6)
+
+- There are some css styles missing
+  - header styles and icons
+  - We find them here in the `applications.css` file:
+
+<img width="918" alt="Screenshot 2023-10-07 at 12 25 56" src="https://github.com/SandyRodger/RB175_networked_applications/assets/78854926/92ccbb7c-7619-47e2-83ce-1502cb9e11fa">
+
 ## [Marking Todos as Completed](https://launchschool.com/lessons/9230c94c/assignments/e6f7dc0c)
+
+- Render a checkbox to the left of each item so we can mark it as complete.
+- We use the following form code:
+
+```list.erb
+<form action="" method="post" class="check">
+   <input type="hidden" name="completed" value="" />
+   <button type="submit">Complete</button>
+</form>
+```
+
+#### How to toggle boolean values in a form
+
+- Do we care what the current value is before we toggle to a new value?
+- The risk is that you toggle a false value to true, but before the request is processed it turns to true and so is toggled back. This is a real problem apparently.
+- So we want to include the desired end-state in the request. It's good for web application design because it mirrors HTTP's stateless architecture.
+- Remember, your data can change between the time you view it and the time you change it. So make your interactions as stateless as possible. Don't rely on informaton which is subject to change.
+  - like, what happens if a user has 2 tabs open in the same browser?
+
+- solution video [10:43]
+
+```list.erb
+    <% sort_todos(@list[:todos]) do |todo, index| %>
+      <% if todo[:completed] %>
+        <li class="complete">
+        <% else %>
+          <li>
+        <% end %>
+```
+
+```todo.rb
+# Update the status of a todo
+post "/lists/:list_id/todos/:id" do
+  @list_id = params[:list_id].to_i
+  @list = session[:lists][@list_id]
+
+  todo_id = params[:id].to_i
+  is_completed = params[:completed] == "true"
+  @list[:todos][todo_id][:completed] = is_completed
+  session[:success] = "The todo has been updated."
+  redirect "/lists/#{@list_id}"
+end
+```
+
+- [9:00] Todo item styling.
+
 ## [Completing All Todos on a List](https://launchschool.com/lessons/9230c94c/assignments/87aa60f3)
+
+-
+
 ## [Using View Helpers to Apply Styles](https://launchschool.com/lessons/9230c94c/assignments/dd71166b)
 ## [Sorting and Filtering with View Helpers](https://launchschool.com/lessons/9230c94c/assignments/5046aba5)
 ## [Deploying to Heroku](https://launchschool.com/lessons/9230c94c/assignments/7d7b4dd7)
