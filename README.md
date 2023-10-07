@@ -104,6 +104,7 @@
   - [Add form](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#add-form)
   - [New list](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#new_listerb)
   - [Post method](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#post-method)
+  - [relative URLs for stylesheets](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#relative-urls-for-stylesheets)
 - [URL Discussion](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#url-discussion)
   - [Adding comments](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#adding-comments)
   - [Choosing URLs](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#choosing-urls)
@@ -148,7 +149,7 @@
 |2	Handling Requests Manually|17.6.23 |
 |3	Working with Sinatra|26.9.23|
 |4	Deploying Sinatra Applications|4.10.23|
-|5	Project: Todos|5.10.23|
+|5	Project: Todos|5.10.23|7.10.23|
 |6	Securing Applications|
 |7	Adding JavaScript|
 |8	Project: File-based CMS|
