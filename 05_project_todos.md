@@ -670,4 +670,21 @@ complete_todos, incomplete_todos = todos.partition { |todo| todo[:completed]}
 - Web browsers don't support request methods other than `GET` or `POST` in HTML forms so sometimes you have to make do with those options.
 - View-helpers allow a way to extract the code that determines what HTML markup is generated for view. 
 
-## [Quiz]()
+## [Quiz](https://launchschool.com/quizzes/83cecdb1)
+
+| Question | My answer | correct? | Correction |
+| :--- | :---: | :---: | :---: |
+|1.| A, D | no | Also C - If you meant to send a POST /edit request but sent a GET /edit request instead, then change the method to post. Because editing is always done with `POST` I suppose.| 
+|2.| B, C | yes | |
+|3.| D | yes | |
+|4.| A, B | not B |  If you specify the URL as a relative path name, Sinatra will look for the file in a public directory relative to the URL of the page. For instance, if you're displaying a page at /user/204/profile, then this tag will try to load the CSS from user/204/public/stylesheets/app.css instead of public/stylesheets/app.css. But this isn't how it worked on my machine... ? |
+|5.| B, D | yes ||
+|6.| D | C | Defining the message at location 4 will show the message on a page by itself when an error occurs. (This is very bizarre to me)|
+|7.| B | yes ||
+|8.| A | C |  The typical Sinatra pattern uses redirection after a successful action and reloads the current view after an error. Reloading the template lets it access the entered form data from params and any instance variables; redirection clears params and resets all instance variables. |
+|9.| B, C |not B | yield_content includes the generated code at its new location.|
+|10.| D | yes | The bad weight will cause the route to render views/edit.erb. Since the template uses the instance variable @animal_weight (which post "/animals/:id/edit" doesn't define), it will display an empty weight field.|
+|11.| A | and D |  Both of these snippets use either @animal_weight or params[:animal_weight] depending on which is available. In our application, it uses @animal_weight when displaying an unedited record, and params[:animal_weight] after an error. The way we set up our application, both items will never have a value at the same time, so it doesn't matter which we try first.|
+|12.|B, C | yes| | |
+|13.| A, B | yes | |
+|total|7/13 (54%)|
