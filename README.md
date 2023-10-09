@@ -138,6 +138,17 @@
 - [Quiz](https://github.com/SandyRodger/RB175_networked_applications/blob/main/05_project_todos.md#quiz)
 
 ## [6. Securing Applications](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md)
+
+- [Introduction](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md#:~:text=Securing%20Applications-,Introduction,-Keeping%20HTML%20safe)
+  - [Keeping HTML safe](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md#:~:text=Introduction-,Keeping%20HTML%20safe,-An%20Example)
+  - [An example](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md#:~:text=Keeping%20HTML%20safe-,An%20Example,-Sanitizing%20HTML)
+- [Sanitizing HTML](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md#:~:text=An%20Example-,Sanitizing%20HTML,-Escaping%20HTML)
+  - [Escaping HTML](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md#escaping-html)
+  - [A more thorough approach](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md#a-more-thorough-approach)
+- [Handling bad input](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md#handling-bad-input)
+- [HTTP methods and security](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md#:~:text=Handling%20Bad%20Input-,HTTP%20Methods%20and%20Security)
+- [Quiz](https://github.com/SandyRodger/RB175_networked_applications/blob/main/06_securing_applications.md#quiz)
+
 ## [7. Adding JavaScript](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md)
 ## [8. Project: File-based CMS](https://github.com/SandyRodger/RB175_networked_applications/blob/main/08_project_file_based_CMS.md)
 ## [9. Optional Projects](https://github.com/SandyRodger/RB175_networked_applications/blob/main/09_optional_projects.md)
