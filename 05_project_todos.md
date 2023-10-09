@@ -657,7 +657,8 @@ complete_todos, incomplete_todos = todos.partition { |todo| todo[:completed]}
   - The issue was caused by my project repository being within the directory of my RB175 repository.
 - Steps (I won't describe them here):
   1. Configure the application for production and test it locally.
-  2. Create a Heroku application and deploy the code. 
+  2. Create a Heroku application and deploy the code.
+- `heroku open`
 
 ## [Summary](https://launchschool.com/lessons/9230c94c/assignments/0aa7a431)
 
