@@ -188,4 +188,17 @@ No, POST and GET are equally insecure in HTTP because the parameters of the requ
 
 Serving the aplication over HTTPS.
 
-## Quiz
+## [Quiz](https://launchschool.com/quizzes/b8cf9979)
+
+| Question | My answer | correct? | Correction |
+| :--- | :---: | :---: | :---: |
+|1.|
+|2.| 
+|3.| 
+|4.| 
+|5.| 
+|6.| 
+|7.| 
+|8.| 
+|9.| 
+|total|9/9 (100%)|
