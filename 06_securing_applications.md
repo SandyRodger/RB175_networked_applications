@@ -177,6 +177,15 @@ end
 - Charles - HTTP debugging proxy. It allows you to see what data is being sent.
 - [3:10] HTTPs
 - POST v GET
-- 
+
+Practice Problems
+
+1. Is using POST as the HTTP method for a request more secure than GET? Why or why not?
+
+No, POST and GET are equally insecure in HTTP because the parameters of the request can be read by anyone listening in. For GET requests these parameters are in the URL and for POST requests they are in the message body. But both of these places are visible to external observers. This is only avoided with HTTPS.
+
+2. How can a web application be secured so that any data being sent between the client and server can not be viewed by other parties?
+
+Serving the aplication over HTTPS.
 
 ## Quiz
