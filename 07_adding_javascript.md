@@ -68,7 +68,6 @@ console.log("this is a test")
 |3.| |yes||
 |4.| |yes||
 |5.| A, B, C, D| not B| Unique identifiers are not necessarily sequential. Even if you do use sequential values when creating identifiers, deleting items from the data will result in gaps in the sequence.|
-|6.| A, B, D| B, C, D| A. Index numbers change when items in the list change position, which can happen with deletions, rearranging and sorting items, and inserting new items into the list.
-C. Deleting an item from a list can result in an immediate change in index numbers.
+|6.| A, B, D| B, C, D| A. Index numbers change when items in the list change position, which can happen with deletions, rearranging and sorting items, and inserting new items into the list. C. Deleting an item from a list can result in an immediate change in index numbers.
 |total|4/6 (67%)|
 
