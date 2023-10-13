@@ -151,14 +151,14 @@
 
 ## [7. Adding JavaScript](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md)
 
-## [Introduction](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#introduction)
-## [A JavaScript Primer](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#a-javascript-primer)
-## [Including JavaScript Files](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#including-javascript-files)
-## [Confirming Destructive Actions](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#confirming-destructive-actions)
-## [Making HTTP Requests From JavaScript](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#making-http-requests-from-javascript)
-## [Adding Identifiers to Todo Items](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#adding-identifiers-to-todo-items)
-## [Adding Identifiers to Lists](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#adding-identifiers-to-lists)
-## [Quiz](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#quiz)
+- [Introduction](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#introduction)
+- [A JavaScript Primer](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#a-javascript-primer)
+- [Including JavaScript Files](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#including-javascript-files)
+- [Confirming Destructive Actions](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#confirming-destructive-actions)
+- [Making HTTP Requests From JavaScript](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#making-http-requests-from-javascript)
+- [Adding Identifiers to Todo Items](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#adding-identifiers-to-todo-items)
+- [Adding Identifiers to Lists](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#adding-identifiers-to-lists)
+- [Quiz](https://github.com/SandyRodger/RB175_networked_applications/blob/main/07_adding_javascript.md#quiz)
 
 ## [8. Project: File-based CMS](https://github.com/SandyRodger/RB175_networked_applications/blob/main/08_project_file_based_CMS.md)
 ## [9. Optional Projects](https://github.com/SandyRodger/RB175_networked_applications/blob/main/09_optional_projects.md)
