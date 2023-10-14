@@ -173,6 +173,6 @@
 |4	Deploying Sinatra Applications|4.10.23|
 |5	Project: Todos|5.10.23|7.10.23|
 |6	Securing Applications|10.10.23|
-|7	Adding JavaScript|
+|7	Adding JavaScript|14.10.23|
 |8	Project: File-based CMS|
 |9	Optional Projects|
