@@ -26,3 +26,21 @@
 - ERB is just the same as String interpolation. [no?](https://launchschool.com/lessons/c3578b91/assignments/d6969b5b0)
 - Also, these exercises work on Chrome, but not Safari. Is that a problem?
 - Rack v Rake.
+
+### Fri 13th October 4pm
+
+- Is a session like a binding? It captures all the things available in that enviroment at that moment?
+- Is Sinatra::Contentfor basically a reverse session? Ie saving a kind of binding information in a template that can be delivered in another template? Is it just for erb templates? OK, I answered my own question. [here's the documentation](https://sinatrarb.com/contrib/content_for)
+- methods that take blocks are like cows with 2 stomachs. THe block and the method code do the same thing, but they work better when seperated?
+
+```todo.rb
+  def sort_lists(lists, &block)
+    complete_lists, incomplete_lists = lists.partition { |list| list_complete?(list)}
+
+    incomplete_lists.each { |list| yield list, lists.index(list) }
+    complete_lists.each { |list| yield list, lists.index(list) }
+  end
+```
+- how to change-all within a code block by using v-line?
+- When you went through the todo and CMS projects, how purist were you about muddling up a solution before peaking at the solution?
+- 
