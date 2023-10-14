@@ -108,7 +108,7 @@ end
 
 - Here is what you need to make your Ruby code into a Rack application:
   - Create a “rackup” file: this is a configuration file that specifies what to run and how to run it. A rackup file uses the file extension `.ru`.
-  - The rack application we use in the rackup file must be an Ruby object that responds to the method call(env). The call(env) method takes one argument, the environment variables for this application.
+  - The rack application we use in the rackup file must be a Ruby object that responds to the method call(env). The call(env) method takes one argument, the environment variables for this application.
   - The call method always returns an array, containing these 3 elements [1]:
     - Status Code: represented by a string or some other data type that responds to to_i.
     - Headers: these will be in the form of key-value pairs inside a hash. The key will be a header name and the corresponding value will be the value for that header.
