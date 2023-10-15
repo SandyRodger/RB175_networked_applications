@@ -7,6 +7,7 @@ require "sinatra/reloader" if development?
 configure do
   enable :sessions
   set :session_secret, "800c27b02a1305b0948568288d4dd682e40c8e0c45d96e2e5e0a72f84594d01f"
+  set :erb, :escape_html => true
 end
 
 helpers do

@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <% if session[:not_found] %>
+      <div> <%= session.delete(:not_found) %> </div>
+    <% end %>
+    <ul>
+      <% @files.each do |file| %>
+        <li><a href="/<%= file %>"><%= file %></a></li>
+      <% end %>
+      <li><a href="/nonfile.txt"><%="Nonfile"%></a></li>
+    </ul>
+  </head>
+</html>
