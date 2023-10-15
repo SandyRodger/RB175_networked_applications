@@ -37,9 +37,17 @@ BUG:
 
 ## [Handling Requests for Nonexistent Documents](https://launchschool.com/lessons/ac566aae/assignments/7748eb7b)
 
-## [Viewing Markdown Files]()
-## [Editing Document Content]()
-## [Isolating Test Execution]()
+## [Viewing Markdown Files](https://launchschool.com/lessons/ac566aae/assignments/98d2fce2)
+
+### Redcarpet Gem
+
+## [Editing Document Content](https://launchschool.com/lessons/ac566aae/assignments/035eb4d6)
+
+
+
+## [Isolating Test Execution](https://launchschool.com/lessons/ac566aae/assignments/a23f0109)
+
+
 ## [Adding Global Style and Behavior]()
 ## [Sidebar: Favicon Requests]()
 ## [Creating New Documents]()
