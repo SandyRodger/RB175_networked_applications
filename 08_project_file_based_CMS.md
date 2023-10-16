@@ -48,7 +48,9 @@ BUG:
 ## [Isolating Test Execution](https://launchschool.com/lessons/ac566aae/assignments/a23f0109)
 
 
-## [Adding Global Style and Behavior]()
+## [Adding Global Style and Behavior](https://launchschool.com/lessons/ac566aae/assignments/84acfc0c)
+
+
 ## [Sidebar: Favicon Requests]()
 ## [Creating New Documents]()
 ## [Deleting Documents]()
