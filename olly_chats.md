@@ -44,3 +44,24 @@
 - how to change-all within a code block by using v-line?
 - When you went through the todo and CMS projects, how purist were you about muddling up a solution before peaking at the solution?
 - 
+### next chat:
+
+# test/cms_test.rb
+
+- What is last response doing here?
+
+```ruby
+  def test_deleting_document
+    create_document("test.txt")
+
+    post "/test.txt/delete"
+
+    assert_equal 302, last_response.status
+
+    get last_response["Location"]
+    assert_includes last_response.body, "test.txt has been deleted"
+
+    get "/"
+    refute_includes last_response.body, "test.txt"
+  end
+```
