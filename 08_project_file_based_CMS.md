@@ -51,15 +51,37 @@ BUG:
 ## [Adding Global Style and Behavior](https://launchschool.com/lessons/ac566aae/assignments/84acfc0c)
 
 
-## [Sidebar: Favicon Requests]()
-## [Creating New Documents]()
-## [Deleting Documents]()
-## [Signing In and Out]()
-## [Accessing the Session While Testing]()
-## [Restricting Actions to Only Signed-in Users]()
-## [Storing User Accounts in an External File]()
-## [Storing Hashed Passwords]()
-## [Next Steps]()
-## [A Note about Security]()
-## [Summary]()
-## [Quiz]()
+## [Sidebar: Favicon Requests](https://launchschool.com/lessons/ac566aae/assignments/ba2a5d8d)
+
+
+## [Creating New Documents](https://launchschool.com/lessons/ac566aae/assignments/e1e7cf2a)
+
+
+## [Deleting Documents](https://launchschool.com/lessons/ac566aae/assignments/79fccabc)
+
+
+## [Signing In and Out](https://launchschool.com/lessons/ac566aae/assignments/e92bd5bc)
+
+
+## [Accessing the Session While Testing](https://launchschool.com/lessons/ac566aae/assignments/52d6d56d)
+
+
+## [Restricting Actions to Only Signed-in Users](https://launchschool.com/lessons/ac566aae/assignments/cf4382fe)
+
+
+## [Storing User Accounts in an External File](https://launchschool.com/lessons/ac566aae/assignments/c745b2fd)
+
+
+## [Storing Hashed Passwords](https://launchschool.com/lessons/ac566aae/assignments/537af113)
+
+
+## [Next Steps](https://launchschool.com/lessons/ac566aae/assignments/193b81e4)
+
+
+## [A Note about Security](https://launchschool.com/lessons/ac566aae/assignments/5f01c374)
+
+
+## [Summary](https://launchschool.com/lessons/ac566aae/assignments/ad1cecd7)
+
+
+## [Quiz](https://launchschool.com/lessons/ac566aae/assignments/64db5708)
