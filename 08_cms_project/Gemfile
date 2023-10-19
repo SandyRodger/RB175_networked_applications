@@ -3,9 +3,11 @@ source "https://rubygems.org"
 gem "sinatra"
 gem "sinatra-contrib"
 gem "erubis"
-gem 'rack'
+gem 'rack',  '>= 2.2.4'
 gem 'rack-test'
 gem 'minitest'
 gem 'redcarpet'
+gem 'byebug'
+gem 'bcrypt'
 
-ruby '3.2.1'
+ruby '3.2.2'
