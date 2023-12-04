@@ -80,6 +80,7 @@
 
 - [Introduction](https://launchschool.com/lessons/26c18317/assignments/cf6f9a67)
 - [Configuring an Application for Deployment](https://launchschool.com/lessons/26c18317/assignments/ab12b730)
+  - [Procfile](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md#procfile)
 - [Creating a Heroku Application](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md#creating-a-heroku-application)
 - [Summary](https://github.com/SandyRodger/RB175_networked_applications/blob/main/04_deploying_sinatra_applications.md#summary)
 
