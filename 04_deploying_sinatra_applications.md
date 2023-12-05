@@ -16,7 +16,7 @@
 
 
 Deploying to Heroku fails because buildpack not compatible with App
-Question • Sandy Rodger ,  2 months ago
+
 Here is my repo.
 
 Here's a list of some things I've tried:
@@ -27,7 +27,7 @@ different build packs.
 deleting the app, copying my files to a new directory and starting from scratch.
 The git push heroku main command is always returning a variation of the following error message:
 
-Copy Code
+```
 Enumerating objects: 488, done.
 Counting objects: 100% (488/488), done.
 Delta compression using up to 4 threads
@@ -52,34 +52,30 @@ remote:
 To https://git.heroku.com/sandy-todo-list-app.git
  ! [remote rejected] main -> main (pre-receive hook declined)
 error: failed to push some refs to 'https://git.heroku.com/sandy-todo-list-app.git'
+```
+
 I can see my app listed on my Heroku profile, but with the message 'build failed'. You'll see that an atricle is suggested. I've read it haven't found a solution.
 
 Can anyone help?
 
-Reply 0 Likes   Unwatch    Star  Edit
-3 Replies
 
-Victor Paolo Reyes
-2 months ago
+Victor Paolo Reyes:
+
 Hi, @SandyRodger. That was a bit tricky :sweat_smile:. I tried a bunch of stuff with the buildbacks as well. However, it turns out the problem is that the app isn't the root of your git repo. It wasn't detecting the Gemfile and other files because it was checking at the root path of the repo which is the ../RB175_networked_application. I recommend you copy the app to separate folder outside of an existing repo and then initialize a new repo from there that you would then be linking to your heroku app.
 
 I hope this helps. Cheers :thumbsup:!
 
-Reply    Permalink
 
-Sandy Rodger
-2 months ago
+Sandy Rodger:
+
 Fantastic - yes that has solved the issue. Thanks for taking the time to help me out! The old git repo inside a git repo issue - when will I learn?
 
 Cheers!
 
-Sandy
-Reply 1 Like Edit  Permalink
 
-Victor Paolo Reyes
-2 months ago
+Victor Paolo Reyes:
+
 You're welcome!
 
-Reply    Permalink
 
 ## [Summary](https://launchschool.com/lessons/26c18317/assignments/2989ba00)
