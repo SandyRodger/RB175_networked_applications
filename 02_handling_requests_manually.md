@@ -37,35 +37,59 @@
 
 ## [Parsing Path and Parameters](https://launchschool.com/lessons/cac53b94/assignments/4d46009e)
 
+(Revise 3.2.24)
+
+- We output onto the browser and input in the URL
+- The program outputs a number between 1 and 6, like a dice.
+- `server = TCPServer.new("localhost", 3003)`
+- The URL is input to the program.
+  - `http://` is the protocol
+  - `localhost` is the path
+  - `:3003` is the port
+  - `/` is the path
+  - `?rolls=2&sides=6` is the params (or `/rolls/2/sides/6`)
+    - The style you choose depends on the style of program and type of data. Here the latter implies that sides is somehow a sub-type of rolls. So it's not appropriate.
 
 ## [Sending a Complete Response](https://launchschool.com/lessons/cac53b94/assignments/65b0e271)
 
+- The only required thing in a HTTP response is the status line. The video states that headers and body are too, but they are in fact merely valid and expected.
+- `<pre>` tags to preserve the line-breaks.
+- Headers are meta-data that come in a key-value format and tell the browser how to interpret the rest of the response.
+  - `Content-Type: text/html"
 
 ## [Persisting State in the URL](https://launchschool.com/lessons/cac53b94/assignments/3e3dd1f9)
 
-- Cool!
+- (1st go round notes) Cool!
+- (Returning notes on 3.2.24)
+  - Http is stateless, so there's no place to store info between requests. There are work-arounds, but they aren't HTTP.
+  - So for this program, which uses a current number, the number must be passed in as part of the request in the URL.
+  - (remember `nil.to_i` returns 0)
+  - - `client.puts "<a href='?number=#{number + 1}'>Add one</a>"`
 
 ## [Dealing with Empty Requests](https://launchschool.com/lessons/cac53b94/assignments/423845e1)
 
-- I cant seem to emulate this error
+- (1st go round notes) I cant seem to emulate this error
+- (Returning notes on 3.2.2
+  - In this video the narrator says basically, "we don't know why the browser has dropped the connection, and it's too complicated to find out, so write a line of code that skips any nil value request lines" - which is nice to hear. 
 
 ## [Summary](https://launchschool.com/lessons/cac53b94/assignments/d5f4cb26)
 
-- HTTP is text based, so this lesson was all abput messing with it entirely as a text file.
-- HTTP is made up of TCP. This is the protocol at the Transport layer. Its job is talking between 2 computers.
+- HTTP is text based, so this lesson was all about messing with it entirely with text. Just as a learning tool though.
+- HTTP is made up of TCP. This is the protocol at the Transport layer. Its job is talking between 2 computers. It's the layer right below HTTP.
 - URLs are made up of different parts (I knew this)
-- Params are addewd with `&`s. Obvs.
-- HTTP is stateless which means you have to dance around to make it look like it isn't.
+- Params are added with `&`s. Obvs.
+- HTTP is stateless which means you have to wiggle your bottom to make it look like it isn't. Stateful interactions can be built atop HTTP.
+
 
 ## Overview
 
 |  | Once | Twice | Thrice | Comprehension | Retention
 | :--- | :---: | :---: | :---: | :--- | :---
-|1	Introduction| 14.6.23|
-|2	Coding Along with This Course| 14.6.23|
-|3	A Simple Echo Server|15.6.23|
-|4	Parsing Path and Parameters|16.6.23|
-|5	Sending a Complete Response|16.6.23|
-|6	Persisting State in the URL|17.6.23|
-|7	Dealing with Empty Requests|17.6.23|
-|8	Summary|17.6.23|
+|1	Introduction| 14.6.23|3.2.24|
+|2	Coding Along with This Course| 14.6.23|3.2.24|
+|3	A Simple Echo Server|15.6.23|3.2.24|
+|4	Parsing Path and Parameters|16.6.23|3.2.24|
+|5	Sending a Complete Response|16.6.23|3.2.24|
+|6	Persisting State in the URL|17.6.23|3.2.24|
+|7	Dealing with Empty Requests|17.6.23|3.2.24|
+|8	Summary|17.6.23|3.2.24|
