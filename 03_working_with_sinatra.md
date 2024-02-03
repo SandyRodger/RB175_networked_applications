@@ -6,6 +6,17 @@
 - This is great if you have experience and know what these common tasks are, but if you don't it's confusing.
 - For the following section we'll be building on what you learnt in [Packaging code into a project](https://launchschool.com/lessons/2fdb1ef0/assignments) and the [Ruby Core Tools book](https://launchschool.com/books/core_ruby_tools).
 
+- Core Ruby Tools book:
+  - Ruby installation
+  - Gems
+  - RVMs
+  - Bundler
+  - Rake
+- Packaging Code Into a project (RB130:3):
+  - Command line
+  - Project Directory
+  - Rakefile
+
 ## 2	[Rack](https://launchschool.com/lessons/c3578b91/assignments/2a32fe08)
 
 - Not to be confused with Rake.
@@ -339,7 +350,7 @@ This is a common point of confusion, as these files contain both client-side cod
 
 |  | Once | Twice | Thrice | Comprehension | Retention
 | :--- | :---: | :---: | :---: | :--- | :---
-|1	Introduction|	19.6.23|
+|1	Introduction|	19.6.23|3.2.24|
 |2	Rack	| 19.6.23|19.9.23|
 |3	Sinatra Documentation|19.9.23|
 |4	Preparations|20.9.23|
