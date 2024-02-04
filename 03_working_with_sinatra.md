@@ -37,11 +37,10 @@
 - Rack is also a generic interface that helps devs to connect to web-servers. (it's not just for WEBrick).
 - So we're basically using Rack instead of our Ruby code and WEBrick instead of our TCP server.
 
-HERE'S A SENTENCE I DON'T UNDERSTAND:
 
 "When working with Rack applications our entire server is comprised of the Rack application and the web server (which is probably WEBrick, which comes with your Ruby installation)".
+  - This means that Rack takes care of the onerous task of communicating with the web server via WEBrick. All you have to do is make sure your program is Rack-compliant.
                         
-SO, I'LL COME BACK TO THAT.
 
 - Most Devs would never write a Rack application except in the simplest of situations. We'll go through it here for teaching purposes.
 
