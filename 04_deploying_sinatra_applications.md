@@ -2,11 +2,69 @@
 
 ## [Introduction](https://launchschool.com/lessons/26c18317/assignments/cf6f9a67)
 
+- (2nd go through 15.2.24)
+ - This page talks about Heroku and how we are now ready to make the app accessible to other users.
+ - (deploying to Heroku means the project must be a git repository)
+
 ## [Configuring an Application for Deployment](https://launchschool.com/lessons/26c18317/assignments/ab12b730)
+
+- (2nd go through 15.2.24)
+ - SIX STEPS:
+ - [Article about deploying to free platform, 'fly'](https://medium.com/@ntolasaria/how-to-fly-io-b72ab5467abe)
+ 1. `require "sinatra/reloader" if development?` this line is to prevent the application from reloading while in the production phase.
+  - `development?` and `production?` are methods provided by Sinatra, whose return values depend on the `RACK_ENV` variable. This environment variable is automatically set to `production` by Heroku. So if the aop is running it will return `true` and otherwise `false`.
+ 2. Specify Ruby version in the gemfile.
+ 3.  The following code configures the app to use a production web-server.
+  - We've been using WEBrick in development. But Puma is more appropriate for production.
+  - This is mainly because WEBrick cannot handle a high number of concurrent requests. If you fail to specify 'Puma' or some such program, your app will use WEBrick and may take super-long to load, or even time-out. 
+
+```
+group :production do
+  gem "puma"
+end
+```
+
+- Remember to always run `bundle install` aftrer changing the Gemfile - to prevent bugs spiralling out of control.
+4. Create a `config.ru` file which will tell Puma how to start the file:
+
+```
+require "./book_viewer"
+run Sinatra::Application
+```
+
+5. Create a Procfile:
+
+```
+web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
+```
+
+- A procfile determines what should be strated-up when the program is started.
+- [Heroku article about Procfiles](https://devcenter.heroku.com/articles/procfile)
+ - A procfile can specify many types of processes that will be started up when the app is initialized. For instance:
+  - the app's web-server (which is what we use it for)
+  - different kinds of worker processes.
+  - A singleton-process(?), like a clock
+  - Tasks to preceed new-releases.
+ - It talks a bit about ['dynos'](https://devcenter.heroku.com/articles/dynos), which are apparently "a collection of light-weight Linux containers.
+ - Proc files are text files, but they're only called `Procfile` without extention. You keep it in the project root directory. And there's a special format for writing the commands.
+
+6. Test your Procfile locally, like this:
+
+```
+$ heroku local
+forego | starting web.1 on port 5000
+web.1  | Puma starting in single mode...
+web.1  | * Listening on tcp://0.0.0.0:5000
+web.1  | Use Ctrl-C to stop
+```
+
+- Running this command prompts Heroku to download a program called `forego`, which is for reading and running Procfiles.
 
 ### [Procfile](https://launchschool.com/lessons/26c18317/assignments/ab12b730)
 
 `web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}`
+- (2nd go through 15.2.24)
+ - 
 
 ## [Creating a Heroku Application](https://launchschool.com/lessons/26c18317/assignments/621c4795)
 
