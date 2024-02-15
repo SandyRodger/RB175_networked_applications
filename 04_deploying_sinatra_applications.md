@@ -12,7 +12,7 @@
  - SIX STEPS:
  - [Article about deploying to free platform, 'fly'](https://medium.com/@ntolasaria/how-to-fly-io-b72ab5467abe)
  1. `require "sinatra/reloader" if development?` this line is to prevent the application from reloading while in the production phase.
-  - `development?` and `production?` are methods provided by Sinatra, whose return values depend on the `RACK_ENV` variable. This environment variable is automatically set to `production` by Heroku. So if the aop is running it will return `true` and otherwise `false`.
+  - `development?` and `production?` are methods provided by Sinatra, whose return values depend on the `RACK_ENV` variable. This environment variable is automatically set to `production` by Heroku. So if the app is running it will return `true` and otherwise `false`.
  2. Specify Ruby version in the gemfile.
  3.  The following code configures the app to use a production web-server.
   - We've been using WEBrick in development. But Puma is more appropriate for production.
@@ -31,6 +31,8 @@ end
 require "./book_viewer"
 run Sinatra::Application
 ```
+
+### [Procfile](https://launchschool.com/lessons/26c18317/assignments/ab12b730)
 
 5. Create a Procfile:
 
@@ -60,12 +62,6 @@ web.1  | Use Ctrl-C to stop
 
 - Running this command prompts Heroku to download a program called `forego`, which is for reading and running Procfiles.
 
-### [Procfile](https://launchschool.com/lessons/26c18317/assignments/ab12b730)
-
-`web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}`
-- (2nd go through 15.2.24)
- - 
-
 ## [Creating a Heroku Application](https://launchschool.com/lessons/26c18317/assignments/621c4795)
 
 - I hit a wall trying to deploy my Heroku app. The problem was eventually discovered to be me trying to deploy a repo from within a repo.
@@ -73,7 +69,7 @@ web.1  | Use Ctrl-C to stop
 [thread here](https://launchschool.com/posts/689ace14)
 
 
-Deploying to Heroku fails because buildpack not compatible with App
+Subject: Deploying to Heroku fails because buildpack not compatible with App
 
 Here is my repo.
 
@@ -83,7 +79,7 @@ different Heroku stacks.
 different Ruby versions.
 different build packs.
 deleting the app, copying my files to a new directory and starting from scratch.
-The git push heroku main command is always returning a variation of the following error message:
+The `git push heroku main` command is always returning a variation of the following error message:
 
 ```
 Enumerating objects: 488, done.
@@ -135,5 +131,13 @@ Victor Paolo Reyes:
 
 You're welcome!
 
-
 ## [Summary](https://launchschool.com/lessons/26c18317/assignments/2989ba00)
+
+- (1st go through, no notes).
+- (2nd go through 15.2.24)
+ - This lesson was for deploying the `book_viewer` app.
+ - The Procfile is for which processes are provided (what does that actually mean?) by the application and how to start them.
+ - `config.ru` tells the server how to start the application. In this program that means requiring the main program and running it.
+ - WEBrick's great for development, but sucks for production.
+ - Puma on the other hand can handle multiple processes at once. (AKA it is a "threaded" web-server).
+ - We put the Ruby version in the Gemfile so the same version is used in production and development.
