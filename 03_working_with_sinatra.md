@@ -205,6 +205,7 @@ erb.result
 ## [3. Sinatra Documentation](https://sinatrarb.com/intro.html)
 
 - I don't really know what to do with this web-page. I'll come back to it.
+- (4.2.24 - I've come back to it. It's a great resource)
 
 ## [4. Preparations](https://launchschool.com/lessons/c3578b91/assignments/80745ebb)
 
@@ -214,7 +215,7 @@ erb.result
 
 - This section describes how TCP, Rack, WEBrick and Sinatra interact.
 - Sinatra is a Rack-based development framework.
-- Rack-based means that it uses Rack to connect ot a web-server, such as WEBrick.
+- Rack-based means that it uses Rack to connect to a web-server, such as WEBrick.
 - Sinatra also provides conventions for where to place your application-code.
 - It comes with many features to make my job easier, such as:
   - routing.
@@ -257,46 +258,190 @@ end
 ## [Table of Contents](https://launchschool.com/lessons/c3578b91/assignments/7ef83dcf)
 
 - I peaked at the final two solutions.
+- (Revised 8.2.24) I can do all this easily
 
 ## [Adding a Chapter Page](https://launchschool.com/lessons/c3578b91/assignments/bc383885)
 
 - Peaked at all the solutions...
+- (Revised 8.2.24) I can do all this easily
 
 ## [Code Challenge: Dynamic Directory Index](https://launchschool.com/lessons/c3578b91/assignments/d703af4a)
 
 - ...
+- (Revised 8.2.24)
+  - `Dir.glob` to get the list of files in a directory:
+  - Docs [here](https://docs.ruby-lang.org/en/3.2/Dir.html#method-c-glob)
+
+```
+>> Dir.glob("*")
+=> ["Applications", "code", "Desktop", "Documents", "Downloads", "Dropbox", "Library", "Movies", "Music", "Pictures", "Public", "src"]
+>> Dir.glob("Applications/*")
+=> []
+>> Dir.glob("Documents/*")
+=> ["Documents/Homework", "Documents/Bills", "Documents/letter.docx"]
+>> Dir.glob("Documents/*.docx")
+=> ["Documents/letter.docx"]
+```
+- The `File` class also containts many useful methods for retrurning different portions of a file path ([docs here](https://docs.ruby-lang.org/en/3.2/File.html))
 
 ## [Using Layouts](https://launchschool.com/lessons/c3578b91/assignments/371514e7)
 
 - I need to go over this again for sure.
+- (Revised 8.2.24) - all good
+  - You can have more than one layout! (the default is `layout.erb`)
+
+```ruby
+get '/' do
+  erb :index, layout: :post
+end
+```
 
 ## [Route Parameters](https://launchschool.com/lessons/c3578b91/assignments/687874590)
 
 - yup
+- (Revised 8.2.24) - all good
 
 ## [Before Filters](https://launchschool.com/lessons/c3578b91/assignments/801b30c3)
 
 - tick
+- (Revised 8.2.24)
+  - Before runs before a route, so variables that depend on the route path cannot be put in 'before'.
+  - Common tasks for 'before' :
+    -  check a user is logged in.
+    -  Load variables that will be needed in all the application. "Globally needed data".
 
 ## [View Helpers](https://launchschool.com/lessons/c3578b91/assignments/517ff8ae)
 
 - done
+- (Revised 8.2.24) The `helpers` block.
+  - These are for methods available within the templates for
+    - filtering data
+    - processing data
+    - other functionality.
+
+```ruby
+helpers do
+  def slugify(text)
+    text.downcase.gsub(/\s+/, "-").gsub(/[^\w-]/, "")
+  end
+end
+```
+
+```erb
+<a href="/articles/<%= slugify(@title) %>"><%= @title %></a>
+```
+
+- View helpers are different from normal helper methods in that they are for use within the Templates. Calling view helpers "helpers" is not incorrect, but it is imprecise.
 
 ## [Redirecting](https://launchschool.com/lessons/c3578b91/assignments/a648853a)
 
-- 
+- (Revised 8.2.24)
+  - Sinatra provides a `not_found` route:
+
+```
+not_found do
+  "That page was not found"
+end
+```
+
+- We usually redirect after adding/updating some data.
+- Status code int hte 300s means redirect. (`301` and `302` are the msot common)
 
 ## [Adding a Search Form](https://launchschool.com/lessons/c3578b91/assignments/f2358cb8)
 
--
+- (no notes)
+- (Revised 8.2.24)
+  - There are 2 ways to put data into the URL
+    1. Using query parameters in the URL
+    2. Submitting a form with `POST`
+  - When you submit a form here are the parts:
+    - `action` is the URL path that is requested
+    - `method` is the type of request (ie post, get etc.)
+    - `input` elements will make up the params.
+    - `name` is going to be the param names.
+
+  - Solution:
+```ruby
+# Calls the block for each chapter, passing that chapter's number, name, and
+# contents.
+def each_chapter
+  @contents.each_with_index do |name, index|
+    number = index + 1
+    contents = File.read("data/chp#{number}.txt")
+    yield number, name, contents
+  end
+end
+
+# This method returns an Array of Hashes representing chapters that match the
+# specified query. Each Hash contain values for its :name and :number keys.
+def chapters_matching(query)
+  results = []
+
+  return results if !query || query.empty?
+
+  each_chapter do |number, name, contents|
+    results << {number: number, name: name} if contents.include?(query)
+  end
+
+  results
+end
+
+get "/search" do
+  @results = chapters_matching(params[:query])
+  erb :search
+end
+```
+
+```erb
+<h2 class="content-subhead">Search</h2>
+
+<form action="/search" method="get">
+  <input name="query" value="<%= params[:query] %>"/>
+  <button type="submit">Search</button>
+</form>
+
+<% if params[:query] %>
+  <% if @results.empty? %>
+    <p>Sorry, no matches were found.</p>
+  <% else %>
+    <h2 class="content-subhead">Results for '<%= params[:query]%>'</h2>
+
+    <ul>
+      <% @results.each do |result| %>
+        <li><a href="/chapters/<%= result[:number] %>"><%= result[:name] %></a></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
+```
 
 ## [Improving Search](https://launchschool.com/lessons/c3578b91/assignments/13a608d9)
 
--
+- (no notes)
+- (Revised 8.2.24)
+  - When a URL contains a `#` - that is an anchor element and the page will automatically scroll to that element, if it exists.
+  - SO the solution here involves:
+    - Modifying the `in_paragraphs` method to use an index, whoich is added to each paragraph like this:
+      - ```
+          text.split("\n\n").each_with_index.map do |line, index|
+            "<p id=paragraph#{index}>#{line}</p>"
+          end.join
+        ```
+      - Which would look like `<p id=paragraph4>"But forsooth.... and the whole paragraph"</p>` I think
 
 ## [Code Challenge: Users and Interests](https://launchschool.com/lessons/c3578b91/assignments/36890ee9)
 
-- 
+- (no notes)
+- (Revised 8.2.24)
+  - Requirements:
+    1. Load a list of users from a YAML file
+    2. Each user name should be a link to that user's page
+    3. On the user page display their email address, interests correctly formatted.
+    4. At the bottom have a list of links to other user pages.
+    5. Use a layout to print out a summary of number of interests
+    6. include more deets in number 5
+    7. Add new users to the YAML file and make sure it updates properly.
+- I did this before, so won't repeat it again now.
 
 ## [Server-side vs. Client-side Code](https://launchschool.com/lessons/c3578b91/assignments/8b735100)
 
@@ -308,19 +453,34 @@ end
 |Javascript (`.jss`| server-side |no|**lient-side. The code within these files is evaluated by the JavaScript interpreter within a web browser (a client) to add behavior to a web page**
 |View Templates (`.erb`)| server-side|yes | **Server-side**. The Ruby code within these files is evaluated on the server to generate a response that will then be sent to the client.
 
-But what about the HTML tags within a view template? Aren't those client-side code?
+'But what about the HTML tags within a view template? Aren't those client-side code?'
 
 This is a common point of confusion, as these files contain both client-side code (HTML tags) and server-side code (Ruby). However, since they must be processed by a program on the server before being sent to the client, the ERB templates we've used in this course are considered to be server-side code.
+
+- 4/5 incorrect
+
+- (Revised 8.2.24)
+  - Are you confident in talking about which code is run on the server-side and which on the clinet-side? ... no.
+  - My answers:
+    - Gemfile: Server - correct
+    - Ruby files: Server - correct
+    - Style-sheets: Client - correct. These are instructions for the browser after all.
+    - Javascrtipt-files: Client - correct. Your browser has a JS interpreter. It's like CSS for behavior rather than style.
+    - View-Templates: Client - incorrect. Server side, then sent back to the ruby as a response
+  -  4/5 correct
 
 ## [Optional: A Quick Analysis of How Sinatra Works](https://launchschool.com/lessons/c3578b91/assignments/debd1439)
 
 - skip for now
+- (skipped again 8.2.24)
 
 ## [Summary](https://launchschool.com/lessons/c3578b91/assignments/d46251f7)
 
-- 
+- no notes
+- (Revised 8.2.24) I feel confident I know all this
 
 ## [Quiz](https://launchschool.com/lessons/c3578b91/assignments/0a01eeeb)
+
 
 | Question | My answer | correct? | Correction |
 | :--- | :---: | :---: | :---: |
@@ -346,27 +506,73 @@ This is a common point of confusion, as these files contain both client-side cod
 |20.|C| yes|
 |total|7/20 (35%)
 
+2nd try : 
+
+1. A, C
+ - Also D becauser Sinatra provides  DSL with the `put` `get` `before` stuff)
+2. C  = Correct
+3. C  = Correct
+4. A, B, C
+   - A = correct. The return value  of the Rack call method is the status code
+   - B = Incorrect. The return value is an array, but the final element can't be a string because it has to be something that responds to `.each`. The reason the question mentions Ruby 1.9 is that before that the `String` class did have an `.each` method.
+   - C = Incorrect. The 2nd element contains the response headers - not the request headers.
+   - D would have been correct because as described above, the final element must be something that responds to `.each`.
+5. A, B, C, D
+  - Not D because although Routes can be a string representing the body, but they sometimes arent. Like redirects have no return value.
+6. C
+  - And B. `delete` and `options` both corespond to HTTP methods and Sinatra provides methods for them. Here's a list of some more:
+    - `get`
+    - `put`
+    - `delete`
+    - `options`
+    - `post`
+    - `path`
+    - `link`
+    - `unlink`
+7. C, D = correct
+8. A, B = correct
+9. C
+  - No, just A, because we're referencing the local variable `bob` and the application doesn't know what that it. 
+10. D = correct
+11. B, D = correct
+12. A,
+    - Also D An ERB layout can be used to share code amongst view templates because Layouts baby.
+13. A, B = correct
+14. A, C
+  - Also D because the block takes these as block parameters
+15. D = correct
+16. C = correct
+17. D= correct
+18. B
+    - And C. You missed the redirect because it wasn't in the final line, but the final line wouldn't get called.
+19. C
+  - A would be correct because Sinatra tells the browser to redirect, by sending a `Location` header with the desired location.
+  - D would be correct becasue Sinatra sets the response status code to one indicating redirection (ie in the 300s)
+  - C is wrong because Sinatra does not load the redirected page itself, the page is only loaded when the browser requests it.
+20. C = correct.
+
+- 12/20 = 60%
 
 |  | Once | Twice | Thrice | Comprehension | Retention
 | :--- | :---: | :---: | :---: | :--- | :---
 |1	Introduction|	19.6.23|3.2.24|
-|2	Rack	| 19.6.23|19.9.23|
-|3	Sinatra Documentation|19.9.23|
-|4	Preparations|20.9.23|
-|5	How Routes Work|20.9.23|
-|6	Rendering Templates|20.9.23|
-|7	Table of Contents|20.9.23|
-|8	Adding a Chapter Page|20.9.23|
-|9	Code Challenge: Dynamic Directory Index| 21.9.23
-|10	Using Layouts|22.9.23|
-|11	Route Parameters|22.9.23|
-|12	Before Filters|22.9.23|
-|13	View Helpers|23.9.23|
-|14	Redirecting|23.9.23|
-|15	Adding a Search Form|23.9.23|
-|16	Improving Search|24.9.23|
-|17	Code Challenge: Users and Interests|26.9.23|
-|18	Server-side vs. Client-side Code|26.9.23|
-|19	Optional: A Quick Analysis of How Sinatra Works|26.9.23|
-|20	Summary|26.9.23|
-|21	Quiz|26.9.23|
+|2	Rack	| 19.6.23|19.9.23|8.2.24|
+|3	Sinatra Documentation|19.9.23|8.2.24|
+|4	Preparations|20.9.23|8.2.24|
+|5	How Routes Work|20.9.23|8.2.24|
+|6	Rendering Templates|20.9.23|8.2.24|
+|7	Table of Contents|20.9.23|8.2.24|
+|8	Adding a Chapter Page|20.9.23|8.2.24|
+|9	Code Challenge: Dynamic Directory Index| 21.9.23|8.2.24|
+|10	Using Layouts|22.9.23|8.2.24|
+|11	Route Parameters|22.9.23|8.2.24|
+|12	Before Filters|22.9.23|8.2.24|
+|13	View Helpers|23.9.23|8.2.24|
+|14	Redirecting|23.9.23|8.2.24|
+|15	Adding a Search Form|23.9.23|8.2.24|
+|16	Improving Search|24.9.23|8.2.24|
+|17	Code Challenge: Users and Interests|26.9.23|8.2.24|
+|18	Server-side vs. Client-side Code|26.9.23|8.2.24|
+|19	Optional: A Quick Analysis of How Sinatra Works|26.9.23|8.2.24|
+|20	Summary|26.9.23|8.2.24|
+|21	Quiz|26.9.23 (35%)|8.2.24(60%)|
