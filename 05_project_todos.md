@@ -5,6 +5,11 @@
 - web-based
 - personal task-manager
 - using Sinatra
+
+- (2nd go through 15.2.24)
+  - We update the session secret, thus: `set :session_secret, SecureRandom.hex(32)`
+  - (There are links to the project template for you to download)
+
 ### Topics:
   - Storing data in the session
   - HTTP methods other than GET
@@ -23,6 +28,8 @@ run Sinatra::Application
 
 ### Gemfile and Gemfile.lock
 
+ - has the "dependencies" (say this - sound clever)
+
 ```
 source "https://rubygems.org"
 
@@ -30,7 +37,7 @@ gem "sinatra, "~>1.4.6"
 gem "sinatra-contrib"
 ```
 
-- `sinatra-contrib` contains the reloader module so you don't have to kill the program and reload it every time you make a change.
+- `sinatra-contrib` contains the reloader module so you don't have to kill the program and reload it every time you make a change. YES IT DOES
 
 ### todo.rb
 
@@ -78,16 +85,16 @@ gem "sinatra-contrib"
 - (No video)
 - "Data that persists over time"
 - HTTP is a protocol for the interactions between client and server.
-- "HTTP is state-less" means every HTTP request is handled seperately. So when a server finishes handling one request, it totally forgets about it and starts on the next. Like a cashier who has no idea who came before the person in front of them (good image?).
+- "HTTP is state-less" means every HTTP request is handled seperately. So when a server finishes handling one request, it totally forgets about it and starts on the next. Like a cashier who has no idea who came before the person in front of them (good image?). But actually everyone in the supermarket is buying supplies for the same event (?)
 - The reality is that servers DO rememeber things between requests. But, doing so requires techniques "built on top of HTTP", and not actually part of HTTP.
-- HTTP has no concept of state. We just use it to send information back and forth. When interpreted correctly by both side this creates a system where we can persist across requests. (like threads of a tapestry only making sense as parts of a whole?).
+- HTTP has no concept of state. We just use it to send information back and forth. When interpreted correctly by both side this creates a system where we can persist across requests. (like threads of a tapestry only making sense as parts of a whole? Or like movies being an illusion created by static images?).
 
 ## [Viewing All Todo Lists](https://launchschool.com/lessons/9230c94c/assignments/7bdd9818)
 
 - What are these lists and where are they going to be stored?
   - Some programs might use a "relational data-base.
   - Here we are going to use a 'session-object' provided by Sinatra.
-    - This means people don't have to log in to the site ot use it.
+    - This means people don't have to log in to the site to use it.
     - The con-side is that if they clear their cookies they lose all their data. So in a production application (?) you would want to store the info somewhere where it wouldn't be lost (unless that was it's purpose).
 - [1:15] We want to define a data-structure that will properly represent the data that the user will create in the eventual session with todo lists containing todo items.
   - Then we can come back and create a way to modify these structures in the user's session.
@@ -175,12 +182,13 @@ end
 
 #### Adding comments
 
-- "In Sinatra sometimes it can be hard to remember what each handler(?) does, because in the block of code it's not obvious"
+- "In Sinatra sometimes it can be hard to remember what each handler(?) does, because in the block of code it's not obvious" - each route, I suppose.
+- So, we add comments
 
 #### Choosing URLs
 
 - Write out the routes we want to build, just as a conceptual exercise.
-- URL design and conventions aren't dealt with so much here, but in larger applications it becomes important.
+- URL design and conventions aren't dealt with so much here, but in larger applications it becomes more important.
 
 #### resource-based routes
 
@@ -189,7 +197,7 @@ end
 ## [Clearing Cookies](https://launchschool.com/lessons/9230c94c/assignments/ada10aa2)
 
 - Dev tools
-  - resources
+  - resources - now called 'application' in Chrome dev tools.
     - Cookies, delete
 - Create 2 todo-lists
 
@@ -197,7 +205,7 @@ end
 - Cut cookie data.
 - reload the page, make more lists.
 - replace cookie value and see previous lists.
-- This is "session-hijacking", a serious security issue, solved by using https.
+- Stealing someone's cookie data in order to impersonate them is "session-hijacking", a serious security issue, solved by using https.
 
 ## [Flash Messages](https://launchschool.com/lessons/9230c94c/assignments/cfb2f0cb)
 
@@ -253,7 +261,8 @@ end
 
 #### session musings
 
-- I THINK I NEED TO UNDERSTAND SESSIONS BETTER. What is `session[:success]` accessing? A key in the `@list` hash. (?) Or is session its own hash? with :success as the key and "The list has been created." as the value? Its one of those 2 I think. And then this session hash remains in existence for the whole session? In the cookie?   
+- I THINK I NEED TO UNDERSTAND SESSIONS BETTER. What is `session[:success]` accessing? A key in the `@list` hash. (?) Or is session its own hash? with :success as the key and "The list has been created." as the value? Its one of those 2 I think. And then this session hash remains in existence for the whole session? In the cookie?
+- Chill out- it's a hash in the cookie.
 
 #### strip method
 
@@ -284,6 +293,8 @@ post '/lists' do
 end
 ```
 
+- just like we only want Ruby methods to do one thing - we also want Sinatra routes to only do one thing. this is often not possible, but that's the aim.
+
 ## [When to Use Validations](https://launchschool.com/lessons/9230c94c/assignments/2f7ac616)
 
 - (No video)
@@ -293,6 +304,8 @@ end
 - Don't write error messages only a dev can understand. These can be helpful to hackers trying to understand the back-end of your program.
 
 ## [Sidebar: Rubocop Warning](https://launchschool.com/lessons/9230c94c/assignments/9a9b017a)
+
+- video : 2 mins
 
 ```ruby
 error = error_for_list_name(list_name)
@@ -328,9 +341,10 @@ end
 - 'All lists' needs to be up at the top right, for all pages.
 
 #### Sinatra::Contentfor
-
+- (Revise: 15.2.24) 
 - [2:00]
 - You can define something in your template and then print it out somewhere else.
+- Whatever is saved in the `content_for` helper, can then be regurgitated elsewhere in the `yield_content` method. The problem I'm having is that in this example we're yielding in the layout, what has been saved in an erb template that was already yielded to the layout. So, the lesson is simply - Sinatra can in fact handle that.
 - [Documentation here](https://sinatrarb.com/contrib/content_for)
 
 ```index.erb
@@ -360,6 +374,7 @@ end
 
 ## [Editing Todo Lists](https://launchschool.com/lessons/9230c94c/assignments/dc70aa1d)
 
+- Revise 16.2.24: First mention of 'params' ?
 - Adding a link to edit lists. This link will take them to a form where they can change the name of the list
 - Solution video:
   - Edit list form will be very similar to the new_list form.
