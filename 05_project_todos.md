@@ -688,6 +688,37 @@ complete_todos, incomplete_todos = todos.partition { |todo| todo[:completed]}
 
 ## [Quiz](https://launchschool.com/quizzes/83cecdb1)
 
+- attempt on 17.2.24:
+1. A (not C because that path lacks quote marks) WRONG - It's actually a, c, d
+2. B, C -  CORRECT
+3. b, c, d - WRONG (the correct syntax for alias is without a comma (also I think it's only for methods?)
+4. a - CORRECT
+5. a, b, d -WRONG Not a : Using resource-based routes means the dev has to name pages after the resource.
+6. c - CORRECT
+7. b - CORRECT
+8. c - CORRECT
+9. b - WRONG, actually C, because if you read the question you'll see it';s asking about the code to be sucked up, not the code to be spewed out elsewhere.
+10. b - WRONG it's d because it uses an IV that hasn't been assigned, so will present as ""/
+11. a or d, i'm not sure - i'm putting a WRONG - it's both.
+12. b, d WRONG, b and c
+13. a, b - Correct
+6/13 = 46%
+(My feedback: Question 11 gives away the answer to question 10. Also the wording of question 11 seems to be a typo: "How would you change the code to code to do this?")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 | Question | My answer | correct? | Correction |
 | :--- | :---: | :---: | :---: |
 |1.| A, D | no | Also C - If you meant to send a POST /edit request but sent a GET /edit request instead, then change the method to post. Because editing is always done with `POST` I suppose.| 
