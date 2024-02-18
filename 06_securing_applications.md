@@ -190,6 +190,19 @@ Serving the aplication over HTTPS.
 
 ## [Quiz](https://launchschool.com/quizzes/b8cf9979)
 
+- 2nd try on 18.2.24:
+
+1. a, b - CORRECT
+2. d, c - WRONG : not c, because 'escape_html` on its own is outside of Sinatra's scope.
+3. b - CORRECT
+4. a - CORRECT
+5. b - CORRECT
+6. d - Wrong: actually c. They are defined in the top level and called in the routes. (read the question better)
+7. a - CORRECT
+8. c - CORRECT
+9. c - CORRECT
+
+8/9 (89%)
 | Question | My answer | correct? | Correction |
 | :--- | :---: | :---: | :---: |
 |1.|
