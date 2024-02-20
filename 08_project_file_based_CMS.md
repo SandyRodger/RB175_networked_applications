@@ -25,7 +25,12 @@ Where my implementation differed from LS:
 
 BUG:
 
-- I coiuldn't get the webpage to respond to my changes, until i realized that if a `layout.erb` file exists, the program will default to that, even though you specify another `erb` page (here `index.erb`) in the path. Made more confusing by the inspector calling the page 'index'.
+- I couldn't get the webpage to respond to my changes, until i realised that if a `layout.erb` file exists, the program will default to that, even though you specify another `erb` page (here `index.erb`) in the path. Made more confusing by the inspector calling the page 'index'. (retrospective: ....erm, no it doesn't ?)
+
+- I may one day understand `__FILE__`, but for now FML:
+  - "The __FILE__ argument is a well-known Ruby feature, but it's poorly documented. It represents the name of the file that contains the reference to __FILE__. For instance, if your file is name myprog.rb and you run it with the ruby myprog.rb, then __FILE__ is myprog.rb. When we combine this value with .. in the call to expand_path, we get the absolute path name of the directory where our program lives. For instance, if myprog.rb is in the /Users/me/project directory, then File.expand_path("..", __FILE__) returns /Users/me/project. This value lets us access other files in our project directory without having to use relative path names."
+  - But the take-away is all you need is `File.expand_path("..", __FILE__)` to reliably give you the name of the directory this file is in.
+    - (An alternative is `File.expand_path(__dir__)`)
 
 ## [Viewing Text Files](https://launchschool.com/lessons/ac566aae/assignments/2ac6062e)
 
@@ -40,6 +45,7 @@ BUG:
 ## [Viewing Markdown Files](https://launchschool.com/lessons/ac566aae/assignments/98d2fce2)
 
 ### Redcarpet Gem
+- I had totally forgotten about this. And honestly I'm not sue i get why it's here, even now (RB189)
 
 ## [Editing Document Content](https://launchschool.com/lessons/ac566aae/assignments/035eb4d6)
 
