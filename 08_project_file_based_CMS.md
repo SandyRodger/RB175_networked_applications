@@ -49,10 +49,12 @@ BUG:
 
 ## [Editing Document Content](https://launchschool.com/lessons/ac566aae/assignments/035eb4d6)
 
-
+- In Sinatra if you redirect from a GET the status code is 302. For POST it is 303. This is particularly relevant to testing.
 
 ## [Isolating Test Execution](https://launchschool.com/lessons/ac566aae/assignments/a23f0109)
 
+- Using different data for testing so the tests don't fail when we use the real program.
+  - `File.join` adds the correct seperator for different elements of a path. (`/` for OS X/Linux and `\` for Windows.
 
 ## [Adding Global Style and Behavior](https://launchschool.com/lessons/ac566aae/assignments/84acfc0c)
 
@@ -80,14 +82,39 @@ BUG:
 
 ## [Storing Hashed Passwords](https://launchschool.com/lessons/ac566aae/assignments/537af113)
 
+- salting
 
 ## [Next Steps](https://launchschool.com/lessons/ac566aae/assignments/193b81e4)
 
 
 ## [A Note about Security](https://launchschool.com/lessons/ac566aae/assignments/5f01c374)
 
+- "allow-listing"
 
 ## [Summary](https://launchschool.com/lessons/ac566aae/assignments/ad1cecd7)
 
 
 ## [Quiz](https://launchschool.com/lessons/ac566aae/assignments/64db5708)
+
+- First go 11/18(61%)
+- Second go: 8/18(44%)
+
+1. B, D - CORRECT
+2. b  - WRONG. Same mistake as last time. We do store this information in the `Content-Type` header, but it is set in the headers method. `Content-Type` isn't a method Sinatra provides.
+3. A, b, c - WRONG. And also D. The `Rack::Test::Methods` call need an instance of a Sinatra app, which is what is returned by the `app` method. 
+4. abcd - Not B. The HTTP method is part of the test's set-upo, so it wouldn't make sense to check this.
+5. bcd - just c. B is about displaying an error PAGE (read more carefully). D wouldn't require a new request (again, read more carefully)
+6. b - CORRECT
+7. ba - Not A. Status code is stored as an int, not a string.
+8. bc - A, C. RedCarpet will change a the markdown into an HTML string, which then gets sent back to the client.
+9. a - CORRECT
+10. abd - CORRECT. Running tests doesn't start a web-server.
+11. b - And C. We can also pass Rack environment data to the `post` method as a hash. The 2nd argument would be params, the 3rd argument would be env vars.
+12. d -   CORRECT
+13. d -   CORRECT
+14. b - A and D. From within a route we can acess the app env settings with 2 calls: `env` and `request.env`. That's it. `ENV`, which you chose` would return end vars for the local shell!
+15. abd - Not A. `erb` doesn't short circuit the request.
+16. a - Nope, C. `Bcrypt::Password.create` will just make a new password-hash. `bcrypt_password == password` works because it's using the `BCrypt::Password#==` argument, rather than `String#==`.
+17. c - CORRECT
+18. a - CORRECT
+
